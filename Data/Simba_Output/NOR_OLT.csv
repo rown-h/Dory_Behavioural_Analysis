@@ -1,0 +1,757 @@
+VIDEO,CLASSIFIER,MEASUREMENT,VALUE
+Dory_NOR_P1_rat01,Left,Event count,8
+Dory_NOR_P1_rat01,Left,Total event duration (s),13.25
+Dory_NOR_P1_rat01,Left,Video length (s),624.958
+Dory_NOR_P1_rat01,Right,Event count,18
+Dory_NOR_P1_rat01,Right,Total event duration (s),20.292
+Dory_NOR_P1_rat01,Right,Video length (s),624.958
+Dory_NOR_P1_rat02,Left,Event count,8
+Dory_NOR_P1_rat02,Left,Total event duration (s),17.958
+Dory_NOR_P1_rat02,Left,Video length (s),624.875
+Dory_NOR_P1_rat02,Right,Event count,13
+Dory_NOR_P1_rat02,Right,Total event duration (s),36.25
+Dory_NOR_P1_rat02,Right,Video length (s),624.875
+Dory_NOR_P1_rat03,Left,Event count,6
+Dory_NOR_P1_rat03,Left,Total event duration (s),14.208
+Dory_NOR_P1_rat03,Left,Video length (s),624.833
+Dory_NOR_P1_rat03,Right,Event count,11
+Dory_NOR_P1_rat03,Right,Total event duration (s),41.167
+Dory_NOR_P1_rat03,Right,Video length (s),624.833
+Dory_NOR_P1_rat04,Left,Event count,9
+Dory_NOR_P1_rat04,Left,Total event duration (s),12.792
+Dory_NOR_P1_rat04,Left,Video length (s),625
+Dory_NOR_P1_rat04,Right,Event count,9
+Dory_NOR_P1_rat04,Right,Total event duration (s),18.417
+Dory_NOR_P1_rat04,Right,Video length (s),625
+Dory_NOR_P1_rat05,Left,Event count,18
+Dory_NOR_P1_rat05,Left,Total event duration (s),30.083
+Dory_NOR_P1_rat05,Left,Video length (s),625.208
+Dory_NOR_P1_rat05,Right,Event count,12
+Dory_NOR_P1_rat05,Right,Total event duration (s),20.833
+Dory_NOR_P1_rat05,Right,Video length (s),625.208
+Dory_NOR_P1_rat07,Left,Event count,15
+Dory_NOR_P1_rat07,Left,Total event duration (s),23.042
+Dory_NOR_P1_rat07,Left,Video length (s),624.667
+Dory_NOR_P1_rat07,Right,Event count,17
+Dory_NOR_P1_rat07,Right,Total event duration (s),13.958
+Dory_NOR_P1_rat07,Right,Video length (s),624.667
+Dory_NOR_P1_rat08,Left,Event count,17
+Dory_NOR_P1_rat08,Left,Total event duration (s),41
+Dory_NOR_P1_rat08,Left,Video length (s),625.125
+Dory_NOR_P1_rat08,Right,Event count,16
+Dory_NOR_P1_rat08,Right,Total event duration (s),24.708
+Dory_NOR_P1_rat08,Right,Video length (s),625.125
+Dory_NOR_P1_rat09,Left,Event count,10
+Dory_NOR_P1_rat09,Left,Total event duration (s),11.75
+Dory_NOR_P1_rat09,Left,Video length (s),625.208
+Dory_NOR_P1_rat09,Right,Event count,13
+Dory_NOR_P1_rat09,Right,Total event duration (s),16.458
+Dory_NOR_P1_rat09,Right,Video length (s),625.208
+Dory_NOR_P1_rat11,Left,Event count,28
+Dory_NOR_P1_rat11,Left,Total event duration (s),46.667
+Dory_NOR_P1_rat11,Left,Video length (s),625
+Dory_NOR_P1_rat11,Right,Event count,35
+Dory_NOR_P1_rat11,Right,Total event duration (s),51.583
+Dory_NOR_P1_rat11,Right,Video length (s),625
+Dory_NOR_P1_rat12,Left,Event count,16
+Dory_NOR_P1_rat12,Left,Total event duration (s),28.708
+Dory_NOR_P1_rat12,Left,Video length (s),625.333
+Dory_NOR_P1_rat12,Right,Event count,12
+Dory_NOR_P1_rat12,Right,Total event duration (s),25.292
+Dory_NOR_P1_rat12,Right,Video length (s),625.333
+Dory_NOR_P1_rat13,Left,Event count,12
+Dory_NOR_P1_rat13,Left,Total event duration (s),27.542
+Dory_NOR_P1_rat13,Left,Video length (s),625
+Dory_NOR_P1_rat13,Right,Event count,15
+Dory_NOR_P1_rat13,Right,Total event duration (s),37.5
+Dory_NOR_P1_rat13,Right,Video length (s),625
+Dory_NOR_P1_rat14,Left,Event count,34
+Dory_NOR_P1_rat14,Left,Total event duration (s),58.917
+Dory_NOR_P1_rat14,Left,Video length (s),624.458
+Dory_NOR_P1_rat14,Right,Event count,30
+Dory_NOR_P1_rat14,Right,Total event duration (s),50.542
+Dory_NOR_P1_rat14,Right,Video length (s),624.458
+Dory_NOR_P1_rat15,Left,Event count,22
+Dory_NOR_P1_rat15,Left,Total event duration (s),47.458
+Dory_NOR_P1_rat15,Left,Video length (s),625
+Dory_NOR_P1_rat15,Right,Event count,27
+Dory_NOR_P1_rat15,Right,Total event duration (s),54.292
+Dory_NOR_P1_rat15,Right,Video length (s),625
+Dory_NOR_P1_rat16,Left,Event count,12
+Dory_NOR_P1_rat16,Left,Total event duration (s),34.375
+Dory_NOR_P1_rat16,Left,Video length (s),624.833
+Dory_NOR_P1_rat16,Right,Event count,25
+Dory_NOR_P1_rat16,Right,Total event duration (s),56.458
+Dory_NOR_P1_rat16,Right,Video length (s),624.833
+Dory_NOR_P1_rat17,Left,Event count,10
+Dory_NOR_P1_rat17,Left,Total event duration (s),22.083
+Dory_NOR_P1_rat17,Left,Video length (s),624.875
+Dory_NOR_P1_rat17,Right,Event count,10
+Dory_NOR_P1_rat17,Right,Total event duration (s),24.25
+Dory_NOR_P1_rat17,Right,Video length (s),624.875
+Dory_NOR_P1_rat18,Left,Event count,18
+Dory_NOR_P1_rat18,Left,Total event duration (s),41.5
+Dory_NOR_P1_rat18,Left,Video length (s),625.125
+Dory_NOR_P1_rat18,Right,Event count,20
+Dory_NOR_P1_rat18,Right,Total event duration (s),24.375
+Dory_NOR_P1_rat18,Right,Video length (s),625.125
+Dory_NOR_P1_rat19,Left,Event count,12
+Dory_NOR_P1_rat19,Left,Total event duration (s),28.958
+Dory_NOR_P1_rat19,Left,Video length (s),624.708
+Dory_NOR_P1_rat19,Right,Event count,29
+Dory_NOR_P1_rat19,Right,Total event duration (s),36.958
+Dory_NOR_P1_rat19,Right,Video length (s),624.708
+Dory_NOR_P1_rat20,Left,Event count,14
+Dory_NOR_P1_rat20,Left,Total event duration (s),36.458
+Dory_NOR_P1_rat20,Left,Video length (s),625.333
+Dory_NOR_P1_rat20,Right,Event count,13
+Dory_NOR_P1_rat20,Right,Total event duration (s),15.417
+Dory_NOR_P1_rat20,Right,Video length (s),625.333
+Dory_NOR_P1_rat21,Left,Event count,8
+Dory_NOR_P1_rat21,Left,Total event duration (s),14.125
+Dory_NOR_P1_rat21,Left,Video length (s),624.583
+Dory_NOR_P1_rat21,Right,Event count,15
+Dory_NOR_P1_rat21,Right,Total event duration (s),23.917
+Dory_NOR_P1_rat21,Right,Video length (s),624.583
+Dory_NOR_P1_rat22,Left,Event count,4
+Dory_NOR_P1_rat22,Left,Total event duration (s),4.625
+Dory_NOR_P1_rat22,Left,Video length (s),624.583
+Dory_NOR_P1_rat22,Right,Event count,14
+Dory_NOR_P1_rat22,Right,Total event duration (s),18.042
+Dory_NOR_P1_rat22,Right,Video length (s),624.583
+Dory_NOR_P1_rat23,Left,Event count,25
+Dory_NOR_P1_rat23,Left,Total event duration (s),44.375
+Dory_NOR_P1_rat23,Left,Video length (s),625.333
+Dory_NOR_P1_rat23,Right,Event count,21
+Dory_NOR_P1_rat23,Right,Total event duration (s),37.083
+Dory_NOR_P1_rat23,Right,Video length (s),625.333
+Dory_NOR_P1_rat24,Left,Event count,15
+Dory_NOR_P1_rat24,Left,Total event duration (s),20.542
+Dory_NOR_P1_rat24,Left,Video length (s),624.792
+Dory_NOR_P1_rat24,Right,Event count,10
+Dory_NOR_P1_rat24,Right,Total event duration (s),23.125
+Dory_NOR_P1_rat24,Right,Video length (s),624.792
+Dory_NOR_P1_rat25,Left,Event count,16
+Dory_NOR_P1_rat25,Left,Total event duration (s),41.542
+Dory_NOR_P1_rat25,Left,Video length (s),624.792
+Dory_NOR_P1_rat25,Right,Event count,21
+Dory_NOR_P1_rat25,Right,Total event duration (s),42.708
+Dory_NOR_P1_rat25,Right,Video length (s),624.792
+Dory_NOR_P1_rat26,Left,Event count,17
+Dory_NOR_P1_rat26,Left,Total event duration (s),32.5
+Dory_NOR_P1_rat26,Left,Video length (s),624.75
+Dory_NOR_P1_rat26,Right,Event count,16
+Dory_NOR_P1_rat26,Right,Total event duration (s),32.792
+Dory_NOR_P1_rat26,Right,Video length (s),624.75
+Dory_NOR_P1_rat27,Left,Event count,29
+Dory_NOR_P1_rat27,Left,Total event duration (s),46.875
+Dory_NOR_P1_rat27,Left,Video length (s),624.75
+Dory_NOR_P1_rat27,Right,Event count,13
+Dory_NOR_P1_rat27,Right,Total event duration (s),20.75
+Dory_NOR_P1_rat27,Right,Video length (s),624.75
+Dory_NOR_P1_rat28,Left,Event count,22
+Dory_NOR_P1_rat28,Left,Total event duration (s),42.333
+Dory_NOR_P1_rat28,Left,Video length (s),625.042
+Dory_NOR_P1_rat28,Right,Event count,24
+Dory_NOR_P1_rat28,Right,Total event duration (s),45.375
+Dory_NOR_P1_rat28,Right,Video length (s),625.042
+Dory_NOR_P1_rat29,Left,Event count,18
+Dory_NOR_P1_rat29,Left,Total event duration (s),25.083
+Dory_NOR_P1_rat29,Left,Video length (s),624.542
+Dory_NOR_P1_rat29,Right,Event count,18
+Dory_NOR_P1_rat29,Right,Total event duration (s),21.292
+Dory_NOR_P1_rat29,Right,Video length (s),624.542
+Dory_NOR_P1_rat30,Left,Event count,21
+Dory_NOR_P1_rat30,Left,Total event duration (s),40
+Dory_NOR_P1_rat30,Left,Video length (s),625.208
+Dory_NOR_P1_rat30,Right,Event count,28
+Dory_NOR_P1_rat30,Right,Total event duration (s),65.042
+Dory_NOR_P1_rat30,Right,Video length (s),625.208
+Dory_NOR_P1_rat31,Left,Event count,5
+Dory_NOR_P1_rat31,Left,Total event duration (s),5.75
+Dory_NOR_P1_rat31,Left,Video length (s),624.75
+Dory_NOR_P1_rat31,Right,Event count,19
+Dory_NOR_P1_rat31,Right,Total event duration (s),31.25
+Dory_NOR_P1_rat31,Right,Video length (s),624.75
+Dory_NOR_P1_rat32,Left,Event count,9
+Dory_NOR_P1_rat32,Left,Total event duration (s),5.792
+Dory_NOR_P1_rat32,Left,Video length (s),624.625
+Dory_NOR_P1_rat32,Right,Event count,23
+Dory_NOR_P1_rat32,Right,Total event duration (s),26.125
+Dory_NOR_P1_rat32,Right,Video length (s),624.625
+Dory_NOR_P2_rat01,Left,Event count,0
+Dory_NOR_P2_rat01,Left,Total event duration (s),0
+Dory_NOR_P2_rat01,Left,Video length (s),624.958
+Dory_NOR_P2_rat01,Right,Event count,2
+Dory_NOR_P2_rat01,Right,Total event duration (s),5.167
+Dory_NOR_P2_rat01,Right,Video length (s),624.958
+Dory_NOR_P2_rat02,Left,Event count,6
+Dory_NOR_P2_rat02,Left,Total event duration (s),13.708
+Dory_NOR_P2_rat02,Left,Video length (s),624.833
+Dory_NOR_P2_rat02,Right,Event count,9
+Dory_NOR_P2_rat02,Right,Total event duration (s),27.167
+Dory_NOR_P2_rat02,Right,Video length (s),624.833
+Dory_NOR_P2_rat03,Left,Event count,2
+Dory_NOR_P2_rat03,Left,Total event duration (s),5.833
+Dory_NOR_P2_rat03,Left,Video length (s),624.875
+Dory_NOR_P2_rat03,Right,Event count,13
+Dory_NOR_P2_rat03,Right,Total event duration (s),39.958
+Dory_NOR_P2_rat03,Right,Video length (s),624.875
+Dory_NOR_P2_rat04,Left,Event count,19
+Dory_NOR_P2_rat04,Left,Total event duration (s),36.792
+Dory_NOR_P2_rat04,Left,Video length (s),624.833
+Dory_NOR_P2_rat04,Right,Event count,8
+Dory_NOR_P2_rat04,Right,Total event duration (s),16.25
+Dory_NOR_P2_rat04,Right,Video length (s),624.833
+Dory_NOR_P2_rat05,Left,Event count,14
+Dory_NOR_P2_rat05,Left,Total event duration (s),27.333
+Dory_NOR_P2_rat05,Left,Video length (s),624.875
+Dory_NOR_P2_rat05,Right,Event count,21
+Dory_NOR_P2_rat05,Right,Total event duration (s),35.583
+Dory_NOR_P2_rat05,Right,Video length (s),624.875
+Dory_NOR_P2_rat06,Left,Event count,9
+Dory_NOR_P2_rat06,Left,Total event duration (s),17.833
+Dory_NOR_P2_rat06,Left,Video length (s),624.875
+Dory_NOR_P2_rat06,Right,Event count,11
+Dory_NOR_P2_rat06,Right,Total event duration (s),16.458
+Dory_NOR_P2_rat06,Right,Video length (s),624.875
+Dory_NOR_P2_rat07,Left,Event count,15
+Dory_NOR_P2_rat07,Left,Total event duration (s),28
+Dory_NOR_P2_rat07,Left,Video length (s),624.875
+Dory_NOR_P2_rat07,Right,Event count,24
+Dory_NOR_P2_rat07,Right,Total event duration (s),30.167
+Dory_NOR_P2_rat07,Right,Video length (s),624.875
+Dory_NOR_P2_rat08,Left,Event count,22
+Dory_NOR_P2_rat08,Left,Total event duration (s),29.583
+Dory_NOR_P2_rat08,Left,Video length (s),624.875
+Dory_NOR_P2_rat08,Right,Event count,20
+Dory_NOR_P2_rat08,Right,Total event duration (s),38.417
+Dory_NOR_P2_rat08,Right,Video length (s),624.875
+Dory_NOR_P2_rat09,Left,Event count,14
+Dory_NOR_P2_rat09,Left,Total event duration (s),15.958
+Dory_NOR_P2_rat09,Left,Video length (s),624.875
+Dory_NOR_P2_rat09,Right,Event count,34
+Dory_NOR_P2_rat09,Right,Total event duration (s),108.042
+Dory_NOR_P2_rat09,Right,Video length (s),624.875
+Dory_NOR_P2_rat10,Left,Event count,16
+Dory_NOR_P2_rat10,Left,Total event duration (s),25.375
+Dory_NOR_P2_rat10,Left,Video length (s),624.833
+Dory_NOR_P2_rat10,Right,Event count,15
+Dory_NOR_P2_rat10,Right,Total event duration (s),14.958
+Dory_NOR_P2_rat10,Right,Video length (s),624.833
+Dory_NOR_P2_rat11,Left,Event count,18
+Dory_NOR_P2_rat11,Left,Total event duration (s),31.917
+Dory_NOR_P2_rat11,Left,Video length (s),624.875
+Dory_NOR_P2_rat11,Right,Event count,37
+Dory_NOR_P2_rat11,Right,Total event duration (s),62.75
+Dory_NOR_P2_rat11,Right,Video length (s),624.875
+Dory_NOR_P2_rat12,Left,Event count,9
+Dory_NOR_P2_rat12,Left,Total event duration (s),18.708
+Dory_NOR_P2_rat12,Left,Video length (s),624.875
+Dory_NOR_P2_rat12,Right,Event count,29
+Dory_NOR_P2_rat12,Right,Total event duration (s),28.292
+Dory_NOR_P2_rat12,Right,Video length (s),624.875
+Dory_NOR_P2_rat13,Left,Event count,6
+Dory_NOR_P2_rat13,Left,Total event duration (s),17.792
+Dory_NOR_P2_rat13,Left,Video length (s),624.833
+Dory_NOR_P2_rat13,Right,Event count,9
+Dory_NOR_P2_rat13,Right,Total event duration (s),18.375
+Dory_NOR_P2_rat13,Right,Video length (s),624.833
+Dory_NOR_P2_rat14,Left,Event count,18
+Dory_NOR_P2_rat14,Left,Total event duration (s),39.333
+Dory_NOR_P2_rat14,Left,Video length (s),624.833
+Dory_NOR_P2_rat14,Right,Event count,14
+Dory_NOR_P2_rat14,Right,Total event duration (s),17.75
+Dory_NOR_P2_rat14,Right,Video length (s),624.833
+Dory_NOR_P2_rat15,Left,Event count,21
+Dory_NOR_P2_rat15,Left,Total event duration (s),23.083
+Dory_NOR_P2_rat15,Left,Video length (s),624.833
+Dory_NOR_P2_rat15,Right,Event count,24
+Dory_NOR_P2_rat15,Right,Total event duration (s),37.833
+Dory_NOR_P2_rat15,Right,Video length (s),624.833
+Dory_NOR_P2_rat16,Left,Event count,8
+Dory_NOR_P2_rat16,Left,Total event duration (s),21.542
+Dory_NOR_P2_rat16,Left,Video length (s),624.833
+Dory_NOR_P2_rat16,Right,Event count,14
+Dory_NOR_P2_rat16,Right,Total event duration (s),14.917
+Dory_NOR_P2_rat16,Right,Video length (s),624.833
+Dory_NOR_P2_rat17,Left,Event count,5
+Dory_NOR_P2_rat17,Left,Total event duration (s),8.792
+Dory_NOR_P2_rat17,Left,Video length (s),624.875
+Dory_NOR_P2_rat17,Right,Event count,11
+Dory_NOR_P2_rat17,Right,Total event duration (s),26.458
+Dory_NOR_P2_rat17,Right,Video length (s),624.875
+Dory_NOR_P2_rat18,Left,Event count,27
+Dory_NOR_P2_rat18,Left,Total event duration (s),30.792
+Dory_NOR_P2_rat18,Left,Video length (s),624.833
+Dory_NOR_P2_rat18,Right,Event count,12
+Dory_NOR_P2_rat18,Right,Total event duration (s),14.25
+Dory_NOR_P2_rat18,Right,Video length (s),624.833
+Dory_NOR_P2_rat19,Left,Event count,28
+Dory_NOR_P2_rat19,Left,Total event duration (s),50.458
+Dory_NOR_P2_rat19,Left,Video length (s),624.833
+Dory_NOR_P2_rat19,Right,Event count,17
+Dory_NOR_P2_rat19,Right,Total event duration (s),20.25
+Dory_NOR_P2_rat19,Right,Video length (s),624.833
+Dory_NOR_P2_rat20,Left,Event count,10
+Dory_NOR_P2_rat20,Left,Total event duration (s),16.567
+Dory_NOR_P2_rat20,Left,Video length (s),600.033
+Dory_NOR_P2_rat20,Right,Event count,10
+Dory_NOR_P2_rat20,Right,Total event duration (s),8.1
+Dory_NOR_P2_rat20,Right,Video length (s),600.033
+Dory_NOR_P2_rat21,Left,Event count,12
+Dory_NOR_P2_rat21,Left,Total event duration (s),18.5
+Dory_NOR_P2_rat21,Left,Video length (s),624.875
+Dory_NOR_P2_rat21,Right,Event count,15
+Dory_NOR_P2_rat21,Right,Total event duration (s),22.583
+Dory_NOR_P2_rat21,Right,Video length (s),624.875
+Dory_NOR_P2_rat22,Left,Event count,9
+Dory_NOR_P2_rat22,Left,Total event duration (s),10.583
+Dory_NOR_P2_rat22,Left,Video length (s),624.833
+Dory_NOR_P2_rat22,Right,Event count,8
+Dory_NOR_P2_rat22,Right,Total event duration (s),11.625
+Dory_NOR_P2_rat22,Right,Video length (s),624.833
+Dory_NOR_P2_rat23,Left,Event count,22
+Dory_NOR_P2_rat23,Left,Total event duration (s),49.75
+Dory_NOR_P2_rat23,Left,Video length (s),624.875
+Dory_NOR_P2_rat23,Right,Event count,15
+Dory_NOR_P2_rat23,Right,Total event duration (s),60.542
+Dory_NOR_P2_rat23,Right,Video length (s),624.875
+Dory_NOR_P2_rat24,Left,Event count,12
+Dory_NOR_P2_rat24,Left,Total event duration (s),53.292
+Dory_NOR_P2_rat24,Left,Video length (s),624.833
+Dory_NOR_P2_rat24,Right,Event count,32
+Dory_NOR_P2_rat24,Right,Total event duration (s),83.083
+Dory_NOR_P2_rat24,Right,Video length (s),624.833
+Dory_NOR_P2_rat25,Left,Event count,7
+Dory_NOR_P2_rat25,Left,Total event duration (s),10.958
+Dory_NOR_P2_rat25,Left,Video length (s),625
+Dory_NOR_P2_rat25,Right,Event count,23
+Dory_NOR_P2_rat25,Right,Total event duration (s),35.792
+Dory_NOR_P2_rat25,Right,Video length (s),625
+Dory_NOR_P2_rat26,Left,Event count,15
+Dory_NOR_P2_rat26,Left,Total event duration (s),23.5
+Dory_NOR_P2_rat26,Left,Video length (s),624.875
+Dory_NOR_P2_rat26,Right,Event count,9
+Dory_NOR_P2_rat26,Right,Total event duration (s),14.667
+Dory_NOR_P2_rat26,Right,Video length (s),624.875
+Dory_NOR_P2_rat27,Left,Event count,21
+Dory_NOR_P2_rat27,Left,Total event duration (s),27.375
+Dory_NOR_P2_rat27,Left,Video length (s),624.917
+Dory_NOR_P2_rat27,Right,Event count,9
+Dory_NOR_P2_rat27,Right,Total event duration (s),16.125
+Dory_NOR_P2_rat27,Right,Video length (s),624.917
+Dory_NOR_P2_rat28,Left,Event count,17
+Dory_NOR_P2_rat28,Left,Total event duration (s),28.417
+Dory_NOR_P2_rat28,Left,Video length (s),624.875
+Dory_NOR_P2_rat28,Right,Event count,24
+Dory_NOR_P2_rat28,Right,Total event duration (s),22.167
+Dory_NOR_P2_rat28,Right,Video length (s),624.875
+Dory_NOR_P2_rat29,Left,Event count,5
+Dory_NOR_P2_rat29,Left,Total event duration (s),8.375
+Dory_NOR_P2_rat29,Left,Video length (s),624.833
+Dory_NOR_P2_rat29,Right,Event count,8
+Dory_NOR_P2_rat29,Right,Total event duration (s),6.25
+Dory_NOR_P2_rat29,Right,Video length (s),624.833
+Dory_NOR_P2_rat30,Left,Event count,11
+Dory_NOR_P2_rat30,Left,Total event duration (s),23.458
+Dory_NOR_P2_rat30,Left,Video length (s),624.875
+Dory_NOR_P2_rat30,Right,Event count,18
+Dory_NOR_P2_rat30,Right,Total event duration (s),25.333
+Dory_NOR_P2_rat30,Right,Video length (s),624.875
+Dory_NOR_P2_rat31,Left,Event count,3
+Dory_NOR_P2_rat31,Left,Total event duration (s),3.125
+Dory_NOR_P2_rat31,Left,Video length (s),624.833
+Dory_NOR_P2_rat31,Right,Event count,2
+Dory_NOR_P2_rat31,Right,Total event duration (s),1
+Dory_NOR_P2_rat31,Right,Video length (s),624.833
+Dory_NOR_P2_rat32,Left,Event count,25
+Dory_NOR_P2_rat32,Left,Total event duration (s),32.792
+Dory_NOR_P2_rat32,Left,Video length (s),624.875
+Dory_NOR_P2_rat32,Right,Event count,22
+Dory_NOR_P2_rat32,Right,Total event duration (s),27.208
+Dory_NOR_P2_rat32,Right,Video length (s),624.875
+Dory_NPR_P1_rat01,Left,Event count,20
+Dory_NPR_P1_rat01,Left,Total event duration (s),18
+Dory_NPR_P1_rat01,Left,Video length (s),624.875
+Dory_NPR_P1_rat01,Right,Event count,17
+Dory_NPR_P1_rat01,Right,Total event duration (s),21.958
+Dory_NPR_P1_rat01,Right,Video length (s),624.875
+Dory_NPR_P1_rat02,Left,Event count,26
+Dory_NPR_P1_rat02,Left,Total event duration (s),35.125
+Dory_NPR_P1_rat02,Left,Video length (s),624.875
+Dory_NPR_P1_rat02,Right,Event count,31
+Dory_NPR_P1_rat02,Right,Total event duration (s),44.458
+Dory_NPR_P1_rat02,Right,Video length (s),624.875
+Dory_NPR_P1_rat03,Left,Event count,38
+Dory_NPR_P1_rat03,Left,Total event duration (s),62.333
+Dory_NPR_P1_rat03,Left,Video length (s),624.875
+Dory_NPR_P1_rat03,Right,Event count,39
+Dory_NPR_P1_rat03,Right,Total event duration (s),63.292
+Dory_NPR_P1_rat03,Right,Video length (s),624.875
+Dory_NPR_P1_rat04,Left,Event count,21
+Dory_NPR_P1_rat04,Left,Total event duration (s),43.458
+Dory_NPR_P1_rat04,Left,Video length (s),624.833
+Dory_NPR_P1_rat04,Right,Event count,26
+Dory_NPR_P1_rat04,Right,Total event duration (s),28.917
+Dory_NPR_P1_rat04,Right,Video length (s),624.833
+Dory_NPR_P1_rat05,Left,Event count,38
+Dory_NPR_P1_rat05,Left,Total event duration (s),39.958
+Dory_NPR_P1_rat05,Left,Video length (s),624.833
+Dory_NPR_P1_rat05,Right,Event count,42
+Dory_NPR_P1_rat05,Right,Total event duration (s),41.792
+Dory_NPR_P1_rat05,Right,Video length (s),624.833
+Dory_NPR_P1_rat06,Left,Event count,18
+Dory_NPR_P1_rat06,Left,Total event duration (s),25.625
+Dory_NPR_P1_rat06,Left,Video length (s),624.833
+Dory_NPR_P1_rat06,Right,Event count,26
+Dory_NPR_P1_rat06,Right,Total event duration (s),34.5
+Dory_NPR_P1_rat06,Right,Video length (s),624.833
+Dory_NPR_P1_rat07,Left,Event count,22
+Dory_NPR_P1_rat07,Left,Total event duration (s),29.5
+Dory_NPR_P1_rat07,Left,Video length (s),624.833
+Dory_NPR_P1_rat07,Right,Event count,37
+Dory_NPR_P1_rat07,Right,Total event duration (s),44.875
+Dory_NPR_P1_rat07,Right,Video length (s),624.833
+Dory_NPR_P1_rat08,Left,Event count,29
+Dory_NPR_P1_rat08,Left,Total event duration (s),53.125
+Dory_NPR_P1_rat08,Left,Video length (s),624.875
+Dory_NPR_P1_rat08,Right,Event count,40
+Dory_NPR_P1_rat08,Right,Total event duration (s),53.042
+Dory_NPR_P1_rat08,Right,Video length (s),624.875
+Dory_NPR_P1_rat09,Left,Event count,32
+Dory_NPR_P1_rat09,Left,Total event duration (s),49.417
+Dory_NPR_P1_rat09,Left,Video length (s),624.833
+Dory_NPR_P1_rat09,Right,Event count,38
+Dory_NPR_P1_rat09,Right,Total event duration (s),51.75
+Dory_NPR_P1_rat09,Right,Video length (s),624.833
+Dory_NPR_P1_rat10,Left,Event count,24
+Dory_NPR_P1_rat10,Left,Total event duration (s),28.458
+Dory_NPR_P1_rat10,Left,Video length (s),624.833
+Dory_NPR_P1_rat10,Right,Event count,29
+Dory_NPR_P1_rat10,Right,Total event duration (s),28.042
+Dory_NPR_P1_rat10,Right,Video length (s),624.833
+Dory_NPR_P1_rat11,Left,Event count,38
+Dory_NPR_P1_rat11,Left,Total event duration (s),49.75
+Dory_NPR_P1_rat11,Left,Video length (s),624.833
+Dory_NPR_P1_rat11,Right,Event count,47
+Dory_NPR_P1_rat11,Right,Total event duration (s),53.917
+Dory_NPR_P1_rat11,Right,Video length (s),624.833
+Dory_NPR_P1_rat12,Left,Event count,23
+Dory_NPR_P1_rat12,Left,Total event duration (s),36.917
+Dory_NPR_P1_rat12,Left,Video length (s),624.875
+Dory_NPR_P1_rat12,Right,Event count,20
+Dory_NPR_P1_rat12,Right,Total event duration (s),27.375
+Dory_NPR_P1_rat12,Right,Video length (s),624.875
+Dory_NPR_P1_rat13,Left,Event count,13
+Dory_NPR_P1_rat13,Left,Total event duration (s),16.875
+Dory_NPR_P1_rat13,Left,Video length (s),624.875
+Dory_NPR_P1_rat13,Right,Event count,21
+Dory_NPR_P1_rat13,Right,Total event duration (s),25.167
+Dory_NPR_P1_rat13,Right,Video length (s),624.875
+Dory_NPR_P1_rat14,Left,Event count,25
+Dory_NPR_P1_rat14,Left,Total event duration (s),33.625
+Dory_NPR_P1_rat14,Left,Video length (s),624.833
+Dory_NPR_P1_rat14,Right,Event count,33
+Dory_NPR_P1_rat14,Right,Total event duration (s),38.292
+Dory_NPR_P1_rat14,Right,Video length (s),624.833
+Dory_NPR_P1_rat15,Left,Event count,43
+Dory_NPR_P1_rat15,Left,Total event duration (s),71.917
+Dory_NPR_P1_rat15,Left,Video length (s),624.833
+Dory_NPR_P1_rat15,Right,Event count,50
+Dory_NPR_P1_rat15,Right,Total event duration (s),67.333
+Dory_NPR_P1_rat15,Right,Video length (s),624.833
+Dory_NPR_P1_rat16,Left,Event count,15
+Dory_NPR_P1_rat16,Left,Total event duration (s),15.75
+Dory_NPR_P1_rat16,Left,Video length (s),624.875
+Dory_NPR_P1_rat16,Right,Event count,19
+Dory_NPR_P1_rat16,Right,Total event duration (s),32.583
+Dory_NPR_P1_rat16,Right,Video length (s),624.875
+Dory_NPR_P1_rat17,Left,Event count,32
+Dory_NPR_P1_rat17,Left,Total event duration (s),45.708
+Dory_NPR_P1_rat17,Left,Video length (s),624.833
+Dory_NPR_P1_rat17,Right,Event count,24
+Dory_NPR_P1_rat17,Right,Total event duration (s),31.958
+Dory_NPR_P1_rat17,Right,Video length (s),624.833
+Dory_NPR_P1_rat18,Left,Event count,41
+Dory_NPR_P1_rat18,Left,Total event duration (s),43
+Dory_NPR_P1_rat18,Left,Video length (s),624.875
+Dory_NPR_P1_rat18,Right,Event count,39
+Dory_NPR_P1_rat18,Right,Total event duration (s),33.917
+Dory_NPR_P1_rat18,Right,Video length (s),624.875
+Dory_NPR_P1_rat19,Left,Event count,32
+Dory_NPR_P1_rat19,Left,Total event duration (s),40.458
+Dory_NPR_P1_rat19,Left,Video length (s),624.875
+Dory_NPR_P1_rat19,Right,Event count,34
+Dory_NPR_P1_rat19,Right,Total event duration (s),30.417
+Dory_NPR_P1_rat19,Right,Video length (s),624.875
+Dory_NPR_P1_rat20,Left,Event count,24
+Dory_NPR_P1_rat20,Left,Total event duration (s),35.625
+Dory_NPR_P1_rat20,Left,Video length (s),624.875
+Dory_NPR_P1_rat20,Right,Event count,24
+Dory_NPR_P1_rat20,Right,Total event duration (s),27.083
+Dory_NPR_P1_rat20,Right,Video length (s),624.875
+Dory_NPR_P1_rat21,Left,Event count,34
+Dory_NPR_P1_rat21,Left,Total event duration (s),39
+Dory_NPR_P1_rat21,Left,Video length (s),624.833
+Dory_NPR_P1_rat21,Right,Event count,48
+Dory_NPR_P1_rat21,Right,Total event duration (s),66.667
+Dory_NPR_P1_rat21,Right,Video length (s),624.833
+Dory_NPR_P1_rat22,Left,Event count,28
+Dory_NPR_P1_rat22,Left,Total event duration (s),31.542
+Dory_NPR_P1_rat22,Left,Video length (s),624.833
+Dory_NPR_P1_rat22,Right,Event count,40
+Dory_NPR_P1_rat22,Right,Total event duration (s),40.75
+Dory_NPR_P1_rat22,Right,Video length (s),624.833
+Dory_NPR_P1_rat23,Left,Event count,37
+Dory_NPR_P1_rat23,Left,Total event duration (s),70.583
+Dory_NPR_P1_rat23,Left,Video length (s),624.875
+Dory_NPR_P1_rat23,Right,Event count,50
+Dory_NPR_P1_rat23,Right,Total event duration (s),66.625
+Dory_NPR_P1_rat23,Right,Video length (s),624.875
+Dory_NPR_P1_rat24,Left,Event count,37
+Dory_NPR_P1_rat24,Left,Total event duration (s),43.458
+Dory_NPR_P1_rat24,Left,Video length (s),624.833
+Dory_NPR_P1_rat24,Right,Event count,43
+Dory_NPR_P1_rat24,Right,Total event duration (s),43.667
+Dory_NPR_P1_rat24,Right,Video length (s),624.833
+Dory_NPR_P1_rat25,Left,Event count,11
+Dory_NPR_P1_rat25,Left,Total event duration (s),15.292
+Dory_NPR_P1_rat25,Left,Video length (s),624.833
+Dory_NPR_P1_rat25,Right,Event count,23
+Dory_NPR_P1_rat25,Right,Total event duration (s),25.333
+Dory_NPR_P1_rat25,Right,Video length (s),624.833
+Dory_NPR_P1_rat26,Left,Event count,21
+Dory_NPR_P1_rat26,Left,Total event duration (s),22.542
+Dory_NPR_P1_rat26,Left,Video length (s),624.833
+Dory_NPR_P1_rat26,Right,Event count,20
+Dory_NPR_P1_rat26,Right,Total event duration (s),34.375
+Dory_NPR_P1_rat26,Right,Video length (s),624.833
+Dory_NPR_P1_rat27,Left,Event count,40
+Dory_NPR_P1_rat27,Left,Total event duration (s),40.167
+Dory_NPR_P1_rat27,Left,Video length (s),624.833
+Dory_NPR_P1_rat27,Right,Event count,45
+Dory_NPR_P1_rat27,Right,Total event duration (s),53.583
+Dory_NPR_P1_rat27,Right,Video length (s),624.833
+Dory_NPR_P1_rat28,Left,Event count,31
+Dory_NPR_P1_rat28,Left,Total event duration (s),36.792
+Dory_NPR_P1_rat28,Left,Video length (s),624.875
+Dory_NPR_P1_rat28,Right,Event count,31
+Dory_NPR_P1_rat28,Right,Total event duration (s),47.708
+Dory_NPR_P1_rat28,Right,Video length (s),624.875
+Dory_NPR_P1_rat29,Left,Event count,20
+Dory_NPR_P1_rat29,Left,Total event duration (s),26.958
+Dory_NPR_P1_rat29,Left,Video length (s),624.833
+Dory_NPR_P1_rat29,Right,Event count,16
+Dory_NPR_P1_rat29,Right,Total event duration (s),16.25
+Dory_NPR_P1_rat29,Right,Video length (s),624.833
+Dory_NPR_P1_rat30,Left,Event count,20
+Dory_NPR_P1_rat30,Left,Total event duration (s),25.583
+Dory_NPR_P1_rat30,Left,Video length (s),624.833
+Dory_NPR_P1_rat30,Right,Event count,26
+Dory_NPR_P1_rat30,Right,Total event duration (s),36.083
+Dory_NPR_P1_rat30,Right,Video length (s),624.833
+Dory_NPR_P1_rat31,Left,Event count,18
+Dory_NPR_P1_rat31,Left,Total event duration (s),23.542
+Dory_NPR_P1_rat31,Left,Video length (s),624.833
+Dory_NPR_P1_rat31,Right,Event count,35
+Dory_NPR_P1_rat31,Right,Total event duration (s),32.333
+Dory_NPR_P1_rat31,Right,Video length (s),624.833
+Dory_NPR_P1_rat32,Left,Event count,29
+Dory_NPR_P1_rat32,Left,Total event duration (s),43.542
+Dory_NPR_P1_rat32,Left,Video length (s),624.833
+Dory_NPR_P1_rat32,Right,Event count,28
+Dory_NPR_P1_rat32,Right,Total event duration (s),24.375
+Dory_NPR_P1_rat32,Right,Video length (s),624.833
+Dory_NPR_P2_rat01,Left,Event count,3
+Dory_NPR_P2_rat01,Left,Total event duration (s),2.708
+Dory_NPR_P2_rat01,Left,Video length (s),624.875
+Dory_NPR_P2_rat01,Right,Event count,7
+Dory_NPR_P2_rat01,Right,Total event duration (s),37.792
+Dory_NPR_P2_rat01,Right,Video length (s),624.875
+Dory_NPR_P2_rat02,Left,Event count,13
+Dory_NPR_P2_rat02,Left,Total event duration (s),12.25
+Dory_NPR_P2_rat02,Left,Video length (s),624.875
+Dory_NPR_P2_rat02,Right,Event count,7
+Dory_NPR_P2_rat02,Right,Total event duration (s),5.667
+Dory_NPR_P2_rat02,Right,Video length (s),624.875
+Dory_NPR_P2_rat03,Left,Event count,15
+Dory_NPR_P2_rat03,Left,Total event duration (s),32.917
+Dory_NPR_P2_rat03,Left,Video length (s),624.875
+Dory_NPR_P2_rat03,Right,Event count,12
+Dory_NPR_P2_rat03,Right,Total event duration (s),15.625
+Dory_NPR_P2_rat03,Right,Video length (s),624.875
+Dory_NPR_P2_rat04,Left,Event count,11
+Dory_NPR_P2_rat04,Left,Total event duration (s),9.417
+Dory_NPR_P2_rat04,Left,Video length (s),624.833
+Dory_NPR_P2_rat04,Right,Event count,6
+Dory_NPR_P2_rat04,Right,Total event duration (s),5.042
+Dory_NPR_P2_rat04,Right,Video length (s),624.833
+Dory_NPR_P2_rat05,Left,Event count,20
+Dory_NPR_P2_rat05,Left,Total event duration (s),16.625
+Dory_NPR_P2_rat05,Left,Video length (s),624.833
+Dory_NPR_P2_rat05,Right,Event count,20
+Dory_NPR_P2_rat05,Right,Total event duration (s),17.5
+Dory_NPR_P2_rat05,Right,Video length (s),624.833
+Dory_NPR_P2_rat06,Left,Event count,24
+Dory_NPR_P2_rat06,Left,Total event duration (s),21.625
+Dory_NPR_P2_rat06,Left,Video length (s),624.875
+Dory_NPR_P2_rat06,Right,Event count,17
+Dory_NPR_P2_rat06,Right,Total event duration (s),20.25
+Dory_NPR_P2_rat06,Right,Video length (s),624.875
+Dory_NPR_P2_rat07,Left,Event count,17
+Dory_NPR_P2_rat07,Left,Total event duration (s),17.458
+Dory_NPR_P2_rat07,Left,Video length (s),624.875
+Dory_NPR_P2_rat07,Right,Event count,12
+Dory_NPR_P2_rat07,Right,Total event duration (s),17.208
+Dory_NPR_P2_rat07,Right,Video length (s),624.875
+Dory_NPR_P2_rat08,Left,Event count,26
+Dory_NPR_P2_rat08,Left,Total event duration (s),26.583
+Dory_NPR_P2_rat08,Left,Video length (s),624.875
+Dory_NPR_P2_rat08,Right,Event count,15
+Dory_NPR_P2_rat08,Right,Total event duration (s),13.25
+Dory_NPR_P2_rat08,Right,Video length (s),624.875
+Dory_NPR_P2_rat09,Left,Event count,10
+Dory_NPR_P2_rat09,Left,Total event duration (s),10.042
+Dory_NPR_P2_rat09,Left,Video length (s),623.792
+Dory_NPR_P2_rat09,Right,Event count,16
+Dory_NPR_P2_rat09,Right,Total event duration (s),12.417
+Dory_NPR_P2_rat09,Right,Video length (s),623.792
+Dory_NPR_P2_rat10,Left,Event count,26
+Dory_NPR_P2_rat10,Left,Total event duration (s),21.25
+Dory_NPR_P2_rat10,Left,Video length (s),624.875
+Dory_NPR_P2_rat10,Right,Event count,9
+Dory_NPR_P2_rat10,Right,Total event duration (s),11.625
+Dory_NPR_P2_rat10,Right,Video length (s),624.875
+Dory_NPR_P2_rat11,Left,Event count,35
+Dory_NPR_P2_rat11,Left,Total event duration (s),41.917
+Dory_NPR_P2_rat11,Left,Video length (s),624.833
+Dory_NPR_P2_rat11,Right,Event count,24
+Dory_NPR_P2_rat11,Right,Total event duration (s),25.833
+Dory_NPR_P2_rat11,Right,Video length (s),624.833
+Dory_NPR_P2_rat12,Left,Event count,16
+Dory_NPR_P2_rat12,Left,Total event duration (s),24.792
+Dory_NPR_P2_rat12,Left,Video length (s),624.833
+Dory_NPR_P2_rat12,Right,Event count,14
+Dory_NPR_P2_rat12,Right,Total event duration (s),6.042
+Dory_NPR_P2_rat12,Right,Video length (s),624.833
+Dory_NPR_P2_rat13,Left,Event count,17
+Dory_NPR_P2_rat13,Left,Total event duration (s),18.875
+Dory_NPR_P2_rat13,Left,Video length (s),624.833
+Dory_NPR_P2_rat13,Right,Event count,8
+Dory_NPR_P2_rat13,Right,Total event duration (s),6.833
+Dory_NPR_P2_rat13,Right,Video length (s),624.833
+Dory_NPR_P2_rat14,Left,Event count,12
+Dory_NPR_P2_rat14,Left,Total event duration (s),8.333
+Dory_NPR_P2_rat14,Left,Video length (s),624.833
+Dory_NPR_P2_rat14,Right,Event count,13
+Dory_NPR_P2_rat14,Right,Total event duration (s),8.208
+Dory_NPR_P2_rat14,Right,Video length (s),624.833
+Dory_NPR_P2_rat15,Left,Event count,22
+Dory_NPR_P2_rat15,Left,Total event duration (s),22.458
+Dory_NPR_P2_rat15,Left,Video length (s),624.875
+Dory_NPR_P2_rat15,Right,Event count,20
+Dory_NPR_P2_rat15,Right,Total event duration (s),18.417
+Dory_NPR_P2_rat15,Right,Video length (s),624.875
+Dory_NPR_P2_rat16,Left,Event count,6
+Dory_NPR_P2_rat16,Left,Total event duration (s),5.875
+Dory_NPR_P2_rat16,Left,Video length (s),624.875
+Dory_NPR_P2_rat16,Right,Event count,4
+Dory_NPR_P2_rat16,Right,Total event duration (s),3.708
+Dory_NPR_P2_rat16,Right,Video length (s),624.875
+Dory_NPR_P2_rat17,Left,Event count,14
+Dory_NPR_P2_rat17,Left,Total event duration (s),14.042
+Dory_NPR_P2_rat17,Left,Video length (s),624.875
+Dory_NPR_P2_rat17,Right,Event count,14
+Dory_NPR_P2_rat17,Right,Total event duration (s),16.208
+Dory_NPR_P2_rat17,Right,Video length (s),624.875
+Dory_NPR_P2_rat18,Left,Event count,10
+Dory_NPR_P2_rat18,Left,Total event duration (s),11.333
+Dory_NPR_P2_rat18,Left,Video length (s),624.875
+Dory_NPR_P2_rat18,Right,Event count,11
+Dory_NPR_P2_rat18,Right,Total event duration (s),8.542
+Dory_NPR_P2_rat18,Right,Video length (s),624.875
+Dory_NPR_P2_rat19,Left,Event count,8
+Dory_NPR_P2_rat19,Left,Total event duration (s),5.583
+Dory_NPR_P2_rat19,Left,Video length (s),624.833
+Dory_NPR_P2_rat19,Right,Event count,8
+Dory_NPR_P2_rat19,Right,Total event duration (s),5.417
+Dory_NPR_P2_rat19,Right,Video length (s),624.833
+Dory_NPR_P2_rat20,Left,Event count,4
+Dory_NPR_P2_rat20,Left,Total event duration (s),4.292
+Dory_NPR_P2_rat20,Left,Video length (s),624.875
+Dory_NPR_P2_rat20,Right,Event count,13
+Dory_NPR_P2_rat20,Right,Total event duration (s),6.125
+Dory_NPR_P2_rat20,Right,Video length (s),624.875
+Dory_NPR_P2_rat21,Left,Event count,17
+Dory_NPR_P2_rat21,Left,Total event duration (s),16.042
+Dory_NPR_P2_rat21,Left,Video length (s),624.875
+Dory_NPR_P2_rat21,Right,Event count,9
+Dory_NPR_P2_rat21,Right,Total event duration (s),7.667
+Dory_NPR_P2_rat21,Right,Video length (s),624.875
+Dory_NPR_P2_rat22,Left,Event count,13
+Dory_NPR_P2_rat22,Left,Total event duration (s),13
+Dory_NPR_P2_rat22,Left,Video length (s),624.875
+Dory_NPR_P2_rat22,Right,Event count,14
+Dory_NPR_P2_rat22,Right,Total event duration (s),13
+Dory_NPR_P2_rat22,Right,Video length (s),624.875
+Dory_NPR_P2_rat23,Left,Event count,6
+Dory_NPR_P2_rat23,Left,Total event duration (s),8.833
+Dory_NPR_P2_rat23,Left,Video length (s),624.875
+Dory_NPR_P2_rat23,Right,Event count,15
+Dory_NPR_P2_rat23,Right,Total event duration (s),14.917
+Dory_NPR_P2_rat23,Right,Video length (s),624.875
+Dory_NPR_P2_rat24,Left,Event count,17
+Dory_NPR_P2_rat24,Left,Total event duration (s),24.75
+Dory_NPR_P2_rat24,Left,Video length (s),624.833
+Dory_NPR_P2_rat24,Right,Event count,23
+Dory_NPR_P2_rat24,Right,Total event duration (s),14.208
+Dory_NPR_P2_rat24,Right,Video length (s),624.833
+Dory_NPR_P2_rat25,Left,Event count,12
+Dory_NPR_P2_rat25,Left,Total event duration (s),14.167
+Dory_NPR_P2_rat25,Left,Video length (s),624.833
+Dory_NPR_P2_rat25,Right,Event count,9
+Dory_NPR_P2_rat25,Right,Total event duration (s),13.125
+Dory_NPR_P2_rat25,Right,Video length (s),624.833
+Dory_NPR_P2_rat26,Left,Event count,15
+Dory_NPR_P2_rat26,Left,Total event duration (s),12.875
+Dory_NPR_P2_rat26,Left,Video length (s),624.875
+Dory_NPR_P2_rat26,Right,Event count,12
+Dory_NPR_P2_rat26,Right,Total event duration (s),8.083
+Dory_NPR_P2_rat26,Right,Video length (s),624.875
+Dory_NPR_P2_rat27,Left,Event count,11
+Dory_NPR_P2_rat27,Left,Total event duration (s),6.75
+Dory_NPR_P2_rat27,Left,Video length (s),624.833
+Dory_NPR_P2_rat27,Right,Event count,6
+Dory_NPR_P2_rat27,Right,Total event duration (s),4.583
+Dory_NPR_P2_rat27,Right,Video length (s),624.833
+Dory_NPR_P2_rat28,Left,Event count,12
+Dory_NPR_P2_rat28,Left,Total event duration (s),7.375
+Dory_NPR_P2_rat28,Left,Video length (s),624.875
+Dory_NPR_P2_rat28,Right,Event count,10
+Dory_NPR_P2_rat28,Right,Total event duration (s),7.375
+Dory_NPR_P2_rat28,Right,Video length (s),624.875
+Dory_NPR_P2_rat29,Left,Event count,7
+Dory_NPR_P2_rat29,Left,Total event duration (s),7.375
+Dory_NPR_P2_rat29,Left,Video length (s),624.833
+Dory_NPR_P2_rat29,Right,Event count,5
+Dory_NPR_P2_rat29,Right,Total event duration (s),5.958
+Dory_NPR_P2_rat29,Right,Video length (s),624.833
+Dory_NPR_P2_rat30,Left,Event count,6
+Dory_NPR_P2_rat30,Left,Total event duration (s),6.417
+Dory_NPR_P2_rat30,Left,Video length (s),624.833
+Dory_NPR_P2_rat30,Right,Event count,12
+Dory_NPR_P2_rat30,Right,Total event duration (s),12
+Dory_NPR_P2_rat30,Right,Video length (s),624.833
+Dory_NPR_P2_rat31,Left,Event count,12
+Dory_NPR_P2_rat31,Left,Total event duration (s),8.458
+Dory_NPR_P2_rat31,Left,Video length (s),624.875
+Dory_NPR_P2_rat31,Right,Event count,10
+Dory_NPR_P2_rat31,Right,Total event duration (s),5.792
+Dory_NPR_P2_rat31,Right,Video length (s),624.875
+Dory_NPR_P2_rat32,Left,Event count,12
+Dory_NPR_P2_rat32,Left,Total event duration (s),10.75
+Dory_NPR_P2_rat32,Left,Video length (s),624.875
+Dory_NPR_P2_rat32,Right,Event count,14
+Dory_NPR_P2_rat32,Right,Total event duration (s),13.458
+Dory_NPR_P2_rat32,Right,Video length (s),624.875
