@@ -16,9 +16,9 @@ rm(list = ls())
 keyfilepath         <- 'Data/Reference_Tables/ratID_key.csv'
 traindaykeyfilepath <- 'Data/Reference_Tables/barnes_day_key.csv'
 
-summaryfilepath     <- '/Users/rowanheggen/Desktop/UNSW/Data/Data Analysis/Barnes/ROI_descriptive_statistics_20251126171800.csv'
-detailfilepath      <- '/Users/rowanheggen/Desktop/UNSW/Data/Data Analysis/Barnes/Detailed_ROI_data_20251126171800.csv'
-pathlengthfilepath  <- '/Users/rowanheggen/Desktop/UNSW/Data/Data Analysis/Barnes/Movement_log_20251127122926.csv'
+summaryfilepath     <- 'Data/Simba_Output/Barnes_Maze/ROI_descriptive_statistics.csv'
+detailfilepath      <- 'Data/Simba_Output/Barnes_Maze/Detailed_ROI_data.csv'
+pathlengthfilepath  <- 'Data/Simba_Output/Barnes_Maze/Movement_log.csv'
 
 show_days  <- TRUE
 groupsexes <- TRUE # Now supported
