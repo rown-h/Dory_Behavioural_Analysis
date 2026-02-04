@@ -4,7 +4,7 @@
 # =========================
 
 # Requires prior analysis in SimBA (Simon Nilsson)
-# Holes in the Barnes maze are ROIs labelled 1 – 18, where 1 is the escape box.
+# Holes in the Barnes maze are SimBA ROIs labelled 1 – 18, where 1 is the escape box.
 
 workingdirectory <- 'Scripts/Barnes_Maze'
 setwd(workingdirectory)
@@ -20,19 +20,20 @@ summaryfilepath     <- 'Data/Simba_Output/Barnes_Maze/ROI_descriptive_statistics
 detailfilepath      <- 'Data/Simba_Output/Barnes_Maze/Detailed_ROI_data.csv'
 pathlengthfilepath  <- 'Data/Simba_Output/Barnes_Maze/Movement_log.csv'
 
-show_days  <- TRUE
-groupsexes <- TRUE # Now supported
+show_days  <- TRUE # Where multiple training sessions happened in one day, average them.
+groupsexes <- TRUE # Show Sex x Treatment groups, rather than just Treatment groups
 errorbars  <- "se" # "ci" or "se"
 
 savegraph  <- FALSE # Saves ggplot
 savecsv    <- FALSE # Saves csv of summary statatistics for each group (e.g. mean, se)
-saveprismcsv <- FALSE # Rearranges data for import into GraphPad Prism
+
+saveprismcsv <- FALSE # Rearranges data for import into GraphPad Prism.
 
 # Toggle the metric used in the final clustered column chart:
 # Options: "pathlength", "latency_primary", "latency_total", "strategy"
 metric_input <- "strategy"
 
-# Named color palette so colors map robustly to factor levels
+# Named color and pattern palettes so they map robustly to factor levels
 my_colors <- c(
   "F.Control" = "#808080",
   "M.Control" = "#808080",
@@ -40,6 +41,10 @@ my_colors <- c(
   "M.ASO"     = "#800080",
   "Control"   = "#808080",
   "ASO"       = "#800080"
+)
+my_patterns <- c(
+  "F" = "stripe", 
+  "M" = "none"
 )
 
 
@@ -61,6 +66,15 @@ pathlength  <- read.csv(pathlengthfilepath)
 
 
 # addIDs function ----
+
+# Extracts identifiers from video filename, assuming it has the following structure:
+# '04Training_rat31' or 'Test_rat31'
+# '04' is the training number OR
+# 'Test' indicates the final session of the Barnes Maze, where no escape box is present
+#      The traindaykeyfilepath can convert between training numbers and day numbers
+# 'rat31' is the personal identifier of the rat
+#      The keyfilepath notes Sex and Treatment for all RatIDs
+
 
 addIDs <- function(df){
   # RatID: string after final underscore
@@ -86,7 +100,7 @@ pathlength <- addIDs(pathlength)
 
 timeunit <- ifelse(show_days, "Day", "Train")
 
-# Metric sources needed for toggling
+# Find the correct columns of the SimBA output to include in dataframes for each metric
 totallatency <- subset(summary, MEASUREMENT == 'VIDEO LENGTH (S)' & SHAPE == 1 & Day != 'Test')
 
 primarylatency <- detail %>%
@@ -144,7 +158,7 @@ pathlength_days <- pathlength %>%
 
 # Calculating strategy scores from external script ----
 
-source("SearchTests.R")
+source("search_tests.R")
 results <- search_tests(detail)
 results <- addIDs(results)
 
@@ -163,7 +177,7 @@ results_days <- results %>%
 
 df_in_results <- if(isTRUE(show_days)) results_days else results
 
-# (Already conditional by Sex here)
+# Calculate summary statistics for graphing, with toggle for grouping sexes
 strategygrouped <- df_in_results %>%
   group_by(Treatment, !!sym(timeunit), !!!(if (groupsexes) rlang::syms("Sex") else NULL)) %>%
   summarise(
@@ -332,7 +346,6 @@ if (groupsexes) {
     )
 }
 
-my_patterns <- c("F" = "stripe", "M" = "none")
 
 p <- p +
   geom_errorbar(
@@ -387,6 +400,8 @@ if (groupsexes) {
 
 print(p)
 
+# Save graph or summary csv files ----
+    
 if (savegraph == TRUE) {
   ggsave(
     filename = paste0("Graphs/StyledForSaba/",
@@ -409,9 +424,6 @@ if (savecsv == TRUE) {
                           ".csv"))
 }
 
-# =========================
-# End of Script
-# =========================
 
 # Export Prism csv ----
 
