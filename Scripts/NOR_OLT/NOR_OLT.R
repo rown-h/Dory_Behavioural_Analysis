@@ -4,7 +4,7 @@
 # "NPR" (Novel Placement Recognition Test) was used as a synonym of "OLT" 
 # (Object Location Task) throughout this script
 
-# Requires prior analysis in SimBa (Simon Nilsson).
+# Requires prior analysis in SimBA (Simon Nilsson).
 # Choose 'Analyze Machine Predictions: Aggregates'
 
 # Assumes your video filenames are in the format:
