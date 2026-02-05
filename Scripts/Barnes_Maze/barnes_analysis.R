@@ -1,10 +1,30 @@
-
 # =========================
 # Barnes Maze Analysis
 # =========================
 
 # Requires prior analysis in SimBA (Simon Nilsson)
 # Holes in the Barnes maze are SimBA ROIs labelled 1 – 18, where 1 is the escape box.
+
+# Total latency
+# Taken directly from video length, assuming they have been trimmed to end as soon as the rat fully enters EB.
+# summaryfilepath
+# 'Analyze ROI Data: Aggregates', check 'Include video length data'
+
+# Primary latency
+# Taken as the first time rat nose enters the EB ROI.
+# detailfilepath
+# 'Analyze ROI Data: Aggregates', check 'Detailed ROI bout data (sequences)'
+
+# Strategy
+# Scored from the sequence of ROIs entered by the rat nose.
+# detailfilepath
+# 'Analyze ROI Data: Aggregates', check 'Detailed ROI bout data (sequences)'
+
+# Path length
+# Path length of nose calculated directly in SimBA.
+# pathlengthfilepath
+# 'Analyze Distances/Velocity: Aggregates'
+
 
 workingdirectory <- 'Scripts/Barnes_Maze'
 setwd(workingdirectory)
