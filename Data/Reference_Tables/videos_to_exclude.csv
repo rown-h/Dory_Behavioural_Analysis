@@ -7,4 +7,7 @@ Dory_NOR_P2_rat14,Rat sitting on object for very extended time
 Dory_NOR_P2_rat18,Object toppled
 Dory_NPR_P1_rat19,Video commenced late
 Dory_NPR_P2_rat02,Video commenced late
-Dory_NPR_P2_rat21,Video commenced late
+Dory_NPR_P2_rat21,Video commenced late,
+Dory_OpenField_rat29,Video terminated early
+Dory_OpenField_rat30,Exploration time greater than video length - likely due to VFR encoding issue
+
