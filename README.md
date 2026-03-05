@@ -53,6 +53,6 @@ To analyse the Barnes maze, ROIs were drawn around each of its 18 holes in SimBA
 
 
 ![Visualisation of search strategies: direct (11), short correction 1 (10), short correction 2 (9), long correction (8), medium correction (7), short serial (8), serial 1 (7), serial 2 (6), serial 3 (5), serial 4 (4), combined 1 (3), combined 2 (2), random (1)](Images/barnes_scoring.svg)
-**Figure 3: Barnes maze search strategy scoring scheme.** Serial searches are defined as searches with fewer than two holes skipped at a time that maintain a consistent direction, save for permission of searching one hole in the reverse direction if the rat then immediately returns to the original direction. Image credit: Rowan Heggen 2026.
+**Figure 3: Barnes maze search strategy scoring scheme.** Pink arrow indicates the sequence of holes visited by a rat, with the corresponding scores shown in green circles. Serial searches are defined as searches with fewer than two holes skipped at a time that maintain a consistent direction, save for permission of searching one hole in the reverse direction if the rat then immediately returns to the original direction. Image credit: Rowan Heggen 2026.
 
 The results for the Barnes maze were analysed by three-way repeated measure ANOVA (α = 0.05, Geisser Greenhouse corrected) and visualised in GraphPad Prism. 
