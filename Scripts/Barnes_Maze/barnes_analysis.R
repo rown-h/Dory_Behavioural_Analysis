@@ -1,100 +1,109 @@
-# =========================
-# Barnes Maze Analysis
-# =========================
+# BARNES MAZE PLOTTING =========================================================
 
+# R Heggen, 5th March 2026
 # Requires prior analysis in SimBA (Simon Nilsson)
-# Holes in the Barnes maze are SimBA ROIs labelled 1 – 18, where 1 is the escape box.
 
-# Total latency
-# Taken directly from video length, assuming they have been trimmed to end as soon as the rat fully enters EB.
-# summaryfilepath
-# 'Analyze ROI Data: Aggregates', check 'Include video length data'
+# For 'total' metrics, video must have been trimmed to end when EB fully entered. 
+# For other metrics, ROIs must be named sequentially from 1 (EB) to 18.
+# For all data, set a minimum likelihood threshold of 0.6 in SimBA.
 
-# Primary latency
-# Taken as the first time rat nose enters the EB ROI.
-# detailfilepath
-# 'Analyze ROI Data: Aggregates', check 'Detailed ROI bout data (sequences)'
-
-# Strategy
-# Scored from the sequence of ROIs entered by the rat nose.
-# detailfilepath
-# 'Analyze ROI Data: Aggregates', check 'Detailed ROI bout data (sequences)'
-
-# Path length
-# Path length of nose calculated directly in SimBA.
-# pathlengthfilepath
-# 'Analyze Distances/Velocity: Aggregates'
-
+# See 'test_description_and_files.csv' for more explanation.
 
 workingdirectory <- 'Scripts/Barnes_Maze'
 setwd(workingdirectory)
 rm(list = ls())
 
-
-# Inputs ----
-
-keyfilepath         <- 'Data/Reference_Tables/ratID_key.csv'
-traindaykeyfilepath <- 'Data/Reference_Tables/barnes_day_key.csv'
-
-summaryfilepath     <- 'Data/Simba_Output/Barnes_Maze/ROI_descriptive_statistics.csv'
-detailfilepath      <- 'Data/Simba_Output/Barnes_Maze/Detailed_ROI_data.csv'
-pathlengthfilepath  <- 'Data/Simba_Output/Barnes_Maze/Movement_log.csv'
-
-show_days  <- TRUE # Where multiple training sessions happened in one day, average them.
-groupsexes <- TRUE # Show Sex x Treatment groups, rather than just Treatment groups
-errorbars  <- "se" # "ci" or "se"
-
-savegraph  <- FALSE # Saves ggplot
-savecsv    <- FALSE # Saves csv of summary statatistics for each group (e.g. mean, se)
-
-saveprismcsv <- FALSE # Rearranges data for import into GraphPad Prism.
-
-# Toggle the metric used in the final clustered column chart:
-# Options: "pathlength", "latency_primary", "latency_total", "strategy"
-metric_input <- "strategy"
-
-# Named color and pattern palettes so they map robustly to factor levels
-my_colors <- c(
-  "F.Control" = "#808080",
-  "M.Control" = "#808080",
-  "F.ASO"     = "#800080",
-  "M.ASO"     = "#800080",
-  "Control"   = "#808080",
-  "ASO"       = "#800080"
-)
-my_patterns <- c(
-  "F" = "stripe", 
-  "M" = "none"
-)
-
-
 # Packages ----
-
 library(tidyverse)
-library(rlang)
-library(ggpattern)
+library(ggpattern) # Allows patterns on graph
+
+# INPUTS =======================================================================
+# Reference table (key) files ----
+key_filepath         <- 'Data/Reference_Tables/ratID_key.csv'
+trainday_key_filepath <- 'Data/Reference_Tables/barnes_day_key.csv'
+
+# SimBA output files ----
+## Detailed ROI data (for strategy and primary latency, errors, or path length)
+nose_filepath  <- 'Data/Simba_Output/Barnes_Maze/Detailed_ROI_data_nose.csv'
+l_ear_filepath <- 'Data/Simba_Output/Barnes_Maze/Detailed_ROI_data_ear_left.csv'
+r_ear_filepath <- 'Data/Simba_Output/Barnes_Maze/Detailed_ROI_data_ear_right.csv'
+
+## Movement logs (for path lengths)
+pathlength_filepath <- 'Data/Simba_Output/Barnes_Maze/Movement_log.csv'
+pathlength_timebin_filepath <- 'Data/Simba_Output/Barnes_Maze/Time_bins_1.0s_movement_results.csv'
+
+## Summary data (for total latency)
+aggregate_ROI_filepath     <- 'Data/Simba_Output/Barnes_Maze/ROI_descriptive_statistics.csv'
 
 
-# Read data ----
+# Calculation options ----
+# For detailed ROI data, use only a single body part, or combine multiple.
+## Options: TRUE  = average for primary, max for score
+##          FALSE = only account for nose tracking. Warning: may be inaccurate.
+combine_bodyparts <- TRUE
 
-key         <- read.csv(keyfilepath)
-traindaykey <- read.csv(traindaykeyfilepath)
-
-summary     <- read.csv(summaryfilepath)
-detail      <- read.csv(detailfilepath)
-pathlength  <- read.csv(pathlengthfilepath)
+# Loop through all metrics and export both Prism CSV, summary CSV and graph.
+export_all <- TRUE
 
 
+# INSTRUCTIONS =================================================================
+# First, run entirety of code.
+
+# Exporting to a Prism-readable format -----------------------------------------
+# To export a csv rearranged appropriately for GraphPad Prism, type in console:
+
+# export_prism(metric_input)
+
+    # Where metric_input is the test you are investigating.
+    ## Options: "latency_total", "latency_primary", "pathlength_total", 
+    ## "pathlength_primary", "strategy", "errors_total", "errors_primary" 
+
+  # Other optional parameters:
+    ## average_days (default TRUE)
+    ## Takes the average of all training sessions in one day and presents as one
+    ## cell. Formula avoids pseudoreplication errors.
+
+    ## save (default TRUE)
+    ## Saves a csv file with columns for each rat (arranged into treatment-sex
+    ## groups) and rows for each training session or day to outdir.
+    
+    ## outdir (default prism_csv)
+    ## Directory to store .csv files.
+
+# Graphing ---------------------------------------------------------------------
+# To graph or save summary statistics, type the following in the console:
+
+# make_graph(metric_input)
+  
+    # Where metric_input is the metric used in the final clustered column chart.
+    ## Options: "latency_total", "latency_primary", "pathlength_total", 
+    ## "pathlength_primary", "strategy", "errors_primary", "errors_total"
+      
+  # Other optional parameters:
+    ## average_days (default TRUE)
+    ## Takes the average of all training sessions in one day and presents as one
+    ## column. Formula avoids pseudoreplication errors.
+    
+    ## group_sexes (default TRUE)
+    ## Makes separate columns for males and females.
+    
+    ## save_graph (default FALSE)
+    ## Exports editable vector .pdf image file of graph to graph_dir.
+    
+    ## graph_dir (default "barnes_graph")
+    ## Directory to store graph images.
+    
+    ## save_summary_csv (default FALSE)
+    ## Saves the csv file with means for each day x treatment/sex-treatment
+    ##  group, including stdev, n, standard error, to summary_csv_dir.
+    
+    ## summary_csv_dir (default "barnes_summary_csv")
+    ## Directory to store summary csvs.
+
+# SCRIPT =======================================================================
 # addIDs function ----
-
-# Extracts identifiers from video filename, assuming it has the following structure:
-# '04Training_rat31' or 'Test_rat31'
-# '04' is the training number OR
-# 'Test' indicates the final session of the Barnes Maze, where no escape box is present
-#      The traindaykeyfilepath can convert between training numbers and day numbers
-# 'rat31' is the personal identifier of the rat
-#      The keyfilepath notes Sex and Treatment for all RatIDs
-
+# Extracts identifiers for rat and training session from video name, and checks
+# against key documents to add extra ID columns
 
 addIDs <- function(df){
   # RatID: string after final underscore
@@ -107,399 +116,493 @@ addIDs <- function(df){
   df$Sex       <- key$Sex[match(df$RatID, key$RatID)]
   df$Treatment <- key$Treatment[match(df$RatID, key$RatID)]
   # Day from Train-Day key
-  df$Day <- traindaykey$Day[match(df$Train, traindaykey$Train)]
+  df$Day <- trainday_key$Day[match(df$Train, trainday_key$Train)]
   df
 }
 
+# READ DATA --------------------------------------------------------------------
+key         <- read.csv(key_filepath)
+trainday_key <- read.csv(trainday_key_filepath)
 
-# Prepare dataframes and add IDs ----
+nose  <- addIDs(read.csv(nose_filepath))
+l_ear <- addIDs(read.csv(l_ear_filepath))
+r_ear <- addIDs(read.csv(r_ear_filepath))
 
-summary    <- addIDs(summary)
-detail     <- addIDs(detail)
-pathlength <- addIDs(pathlength)
+aggregate_ROI      <- addIDs(read.csv(aggregate_ROI_filepath))
+pathlength_total   <- addIDs(read.csv(pathlength_filepath))
+pathlength_timebin <- addIDs(read.csv(pathlength_timebin_filepath))
 
-timeunit <- ifelse(show_days, "Day", "Train")
 
-# Find the correct columns of the SimBA output to include in dataframes for each metric
-totallatency <- subset(summary, MEASUREMENT == 'VIDEO LENGTH (S)' & SHAPE == 1 & Day != 'Test')
+# Prepare a list of relevant bodyparts for ROI-based metrics
+if (combine_bodyparts) {
+  bodyparts <- list(nose  = nose,
+                    l_ear = l_ear,
+                    r_ear = r_ear)
+} else {
+  bodyparts <- list(nose = nose)
+}
 
-primarylatency <- detail %>%
-  filter(SHAPE.NAME == 1) %>%
+# SCORE PER RAT PER SESSION ----------------------------------------------------
+# TOTAL LATENCY ----
+# Assumes videos have been trimmed to end exactly when rodent fully enters EB.
+# 'Video length' must be included in SimBA output.
+# Subsets SHAPE == 1 so there is only 1 row per video.
+latency_total <- subset(aggregate_ROI, 
+                       MEASUREMENT == 'VIDEO LENGTH (S)' 
+                       & SHAPE == 1)
+
+
+# PRIMARY LATENCY ----
+# Within a formula for ease when working with 3 body parts.
+calculate_latency_primary <- function(detail) {
+  detail %>%
+    filter(SHAPE.NAME == 1) %>%
+    group_by(VIDEO) %>%
+    slice_min(order_by = START.TIME, n = 1) %>%
+    ungroup()
+}
+
+# Compute primary latencies for each bodypart
+primarylatencies <- map(bodyparts, calculate_latency_primary)
+
+# Combine, then take median START.TIME across bodyparts by video
+# Does not affect values if only 1 body part entered.
+latency_primary <- primarylatencies %>%
+  bind_rows(.id = "bodypart") %>%
   group_by(VIDEO) %>%
-  slice_min(order_by = START.TIME, n = 1) %>%
-  ungroup()
-
-pathlength <- subset(pathlength, MEASURE == 'Distance (cm)')
-pathlength$VALUE <- pathlength$VALUE / 100 # Convert to metres
-
-
-# Averaging per-rat if show_days == TRUE to avoid pseudoreplication ----
-
-totallatency_days <- totallatency %>%
-  filter(MEASUREMENT == "VIDEO LENGTH (S)") %>%
-  mutate(
-    VALUE = as.numeric(VALUE),
-    Day = as.character(Day),
-    RatID = as.character(RatID)
-  ) %>%
-  group_by(RatID, Day, Sex, Treatment) %>%
   summarise(
-    VALUE = mean(VALUE, na.rm = TRUE),
-    n_sessions_averaged = n(),
+    latency_primary = median(START.TIME, na.rm = TRUE),
+    n_bodyparts    = sum(!is.na(START.TIME)),
+    .groups = "drop"
+  ) %>%
+  addIDs()
+
+
+# TOTAL PATH LENGTH ----
+# Assumes videos trimmed to the moment rodent enters EB.
+# Takes total distance travelled from start to finish, based on aggregate file.
+pathlength_total <- subset(pathlength_total, MEASUREMENT == 'Distance (cm)')
+pathlength_total$VALUE <- pathlength_total$VALUE / 100 # Convert to metres
+
+
+# PRIMARY PATH LENGTH ----
+# Takes (to the nearest second) the total distance travelled before primary 
+# latency timepoint for each video. Uses movement per timebin file,
+# assuming 1 s timebins.
+
+# Round latency_primary to the nearest whole number
+latency_primary$latency_primary_rounded <-
+  as.integer(round(latency_primary$latency_primary))
+
+# Sum VALUE for each VIDEO up to (and including) the rounded latency time bin.
+pathlength_primary <- pathlength_timebin %>%
+  inner_join(
+    select(latency_primary, VIDEO, latency_primary_rounded), by = "VIDEO") %>%
+  filter(`TIME.BIN..` <= latency_primary_rounded) %>%
+  group_by(VIDEO, latency_primary_rounded) %>%
+  summarise(distance_cm = sum(.data$VALUE, na.rm = TRUE),
+            .groups = "drop") %>%
+  addIDs
+
+# Convert to metres
+pathlength_primary$distance <- pathlength_primary$distance_cm / 100
+
+
+# STRATEGY, AND TOTAL/PRIMARY ERRORS ----
+source("SearchTests.R")
+searchtests_results <- map(bodyparts, search_tests)
+
+# Combine, then take median errors and max scores across bodyparts by video
+# Does not affect values if only 1 body part entered.
+searchtest <- searchtests_results %>%
+  bind_rows(.id = "bodypart") %>%
+  group_by(VIDEO) %>%
+  summarise(
+    errors_total = median(total_errors, na.rm = TRUE),
+    errors_primary = median(primary_errors, na.rm = TRUE),
+    reason = reason[which.max(strategy)],    
+    strategy = max(strategy, na.rm = TRUE),
+    n_bodyparts    = sum(!is.na(VIDEO)),
     .groups = "drop"
   )
 
-primarylatency_days <- primarylatency %>%
+searchtest <- addIDs(searchtest)
+
+# COMBINE ALL SCORES INTO ONE DATAFRAME ----------------------------------------
+master_train <- searchtest %>%
+  select(VIDEO, errors_total, errors_primary, strategy, reason) %>%
+  
+  
+  left_join(latency_total %>% select(VIDEO, latency_total = VALUE),
+            by = "VIDEO") %>%
+  left_join(latency_primary %>% select(VIDEO, latency_primary),
+            by = "VIDEO") %>%
+  
+  
+  left_join(pathlength_total %>% select(VIDEO, pathlength_total = VALUE),
+            by = "VIDEO") %>%
+  left_join(pathlength_primary %>% select(VIDEO, pathlength_primary = distance),
+            by = "VIDEO") %>%
+  
+  
+  addIDs
+
+
+
+# Primary values if rodent never locates EB ----
+# Set primary latency to the maximum duration for the phase
+# Set primary path length to total path length
+
+master_train <- master_train %>%
   mutate(
-    START.TIME = as.numeric(START.TIME),
-    Day = as.character(Day),
-    RatID = as.character(RatID)
-  ) %>%
-  group_by(RatID, Day, Sex, Treatment) %>%
+    latency_primary    = if_else(is.na(latency_primary), 
+                                 latency_total, 
+                                 latency_primary), 
+    pathlength_primary = if_else(is.na(pathlength_primary),
+                                 pathlength_total,
+                                 pathlength_primary
+    )
+  )
+
+# SCORE PER RAT PER DAY --------------------------------------------------------
+# Averages each metric across training sessions that occurred on the same day,
+# retaining columns for RatID, Sex and Treatment.
+
+master_day <- master_train %>%
+  group_by(RatID, Sex, Treatment, Day) %>%
   summarise(
-    START.TIME = mean(START.TIME, na.rm = TRUE),
-    n_sessions_averaged = n(),
+    across(c(errors_total, errors_primary, strategy, latency_total,
+             latency_primary, pathlength_total, pathlength_primary), mean),
+    
+    reason = list(unique(reason)),
+    
+    n_averaged = n(),
+    
     .groups = "drop"
   )
 
-pathlength_days <- pathlength %>%
-  mutate(
-    VALUE = as.numeric(VALUE),
-    Day = as.character(Day),
-    RatID = as.character(RatID)
-  ) %>%
-  group_by(RatID, Day, Sex, Treatment) %>%
-  summarise(
-    VALUE = mean(VALUE, na.rm = TRUE),
-    n_sessions_averaged = n(),
-    .groups = "drop"
-  )
 
-
-# Calculating strategy scores from external script ----
-
-source("search_tests.R")
-results <- search_tests(detail)
-results <- addIDs(results)
-
-results_days <- results %>%
-  mutate(
-    Day = as.character(Day),
-    RatID = as.character(RatID),
-    score = as.numeric(score)
-  ) %>%
-  group_by(RatID, Day, Sex, Treatment) %>%
-  summarise(
-    score = mean(score, na.rm = TRUE),
-    n_sessions_averaged = n(),
-    .groups = "drop"
-  )
-
-df_in_results <- if(isTRUE(show_days)) results_days else results
-
-# Calculate summary statistics for graphing, with toggle for grouping sexes
-strategygrouped <- df_in_results %>%
-  group_by(Treatment, !!sym(timeunit), !!!(if (groupsexes) rlang::syms("Sex") else NULL)) %>%
-  summarise(
-    mean_score = mean(score, na.rm = TRUE),
-    count      = n(),
-    std_dev    = sd(score, na.rm = TRUE),
-    .groups    = "drop"
-  ) %>%
-  mutate(se = std_dev / sqrt(count),
-         ci = qt(0.975, df = count - 1) * se)
-
-
-# Unified data prep for final chart ----
-
-x_lab <- if (timeunit == "Day") {
-  "Training Day"
-} else if (timeunit == "Train") {
-  "Training Session"
+# MAKE SINGLE MASTER AND REDEFINABLE METRIC ------------------------------------
+select_metric <- function(metric_input, average_days) {
+  # Avoids any coding conflicts between choosing 'Day' or 'Train' columns by
+  # copying the appropriate column to 'timepoint', and metric column to 'value'.
+  
+  master <- if (average_days) {master_day} else {master_train}
+  master$timepoint <- if (average_days) {master$Day} else {master$Train}
+  
+  master$value <- master[[which(names(master) %in% metric_input)]]
+  master$metric <- metric_input
+  
+  master
 }
 
-prepare_metric_grouped <- function(metric_input, timeunit, strategy_df = NULL) {
-  if (metric_input == "pathlength") {
-    df_in_pathlength <- if (isTRUE(show_days)) pathlength_days else pathlength
-    df <- df_in_pathlength %>%
-      group_by(
-        Treatment,
-        !!sym(timeunit),
-        !!!(if (groupsexes) rlang::syms("Sex") else NULL)
-      ) %>%
-      summarise(
-        mean_value = mean(VALUE, na.rm = TRUE),
-        count      = n(),
-        std_dev    = sd(VALUE, na.rm = TRUE),
-        .groups    = "drop"
-      ) %>%
-      mutate(
-        se = std_dev / sqrt(count),
-        ci = qt(0.975, df = count - 1) * se
-      )
-    y_lab    <- "Average Distance (m)"
-    title    <- "Path Length"
-    y_limits <- c(0, 20)
-    y_breaks <- waiver()
-    
-  } else if (metric_input == "latency_total") {
-    df_in_latency_total <- if (isTRUE(show_days)) totallatency_days else totallatency
-    df <- df_in_latency_total %>%
-      group_by(
-        Treatment,
-        !!sym(timeunit),
-        !!!(if (groupsexes) rlang::syms("Sex") else NULL)
-      ) %>%
-      summarise(
-        mean_value = mean(VALUE, na.rm = TRUE),
-        count      = n(),
-        std_dev    = sd(VALUE, na.rm = TRUE),
-        .groups    = "drop"
-      ) %>%
-      mutate(
-        se = std_dev / sqrt(count),
-        ci = qt(0.975, df = count - 1) * se
-      )
-    y_lab    <- "Average Time (s)"
-    title    <- "Total Latency"
-    y_limits <- c(0,110)
-    y_breaks <- seq(0, 100, by = 20)
-    
-  } else if (metric_input == "latency_primary") {
-    df_in_latency_primary <- if (isTRUE(show_days)) primarylatency_days else primarylatency
-    df <- df_in_latency_primary %>%
-      group_by(
-        Treatment,
-        !!sym(timeunit),
-        !!!(if (groupsexes) rlang::syms("Sex") else NULL)
-      ) %>%
-      summarise(
-        mean_value = mean(START.TIME, na.rm = TRUE),
-        count      = n(),
-        std_dev    = sd(START.TIME, na.rm = TRUE),
-        .groups    = "drop"
-      ) %>%
-      mutate(
-        se = std_dev / sqrt(count),
-        ci = qt(0.975, df = count - 1) * se
-      )
-    y_lab    <- "Average Time (s)"
-    title    <- "Primary Latency"
-    y_limits <- NULL
-    y_breaks <- waiver()
-    
-  } else if (metric_input == "strategy") {
-    if (is.null(strategy_df)) stop("For metric_input = 'strategy', pass strategygrouped as strategy_df.")
-    df <- strategy_df %>% mutate(mean_value = mean_score)
-    y_lab    <- "Average Score"
-    title    <- "Search Strategy"
-    y_limits <- c(0, 11)
-    y_breaks <- 0:11
-    
-  } else {
-    stop("metric_input must be one of: 'pathlength', 'latency_total', 'latency_primary', 'strategy'")
+# OUTPUT FOR GRAPHPAD PRISM ----------------------------------------------------
+# Converts a single metric into a CSV file that can be copied into GraphPad
+# Prism. Each animal receives its own column, and timepoints are rows.
+
+export_prism <- function(metric_input,
+                         average_days = TRUE,
+                         save = TRUE,
+                         outdir = "prism_csv") {
+  
+  master <- select_metric(metric_input, average_days)
+  
+  # Take just the value column you selected.
+  metric_table_long <- master %>%
+    select(RatID, Sex, Treatment, timepoint, value, metric) %>%
+    mutate(name = paste(Treatment, Sex, RatID, sep = "_"))
+  
+  # Convert to wide format, and sort columns by Treat_Sex_RatID.
+  metric_table_wide <- metric_table_long %>%
+    select(name, timepoint, value) %>%
+    pivot_wider(names_from = name, values_from = value) %>%
+    {
+      first <- "timepoint"
+      rest  <- sort(setdiff(names(.), first))
+      select(., all_of(c(first, rest)))
+    }
+  
+  # Optionally, write to CSV.
+  if (save) {
+    dir.create(outdir, showWarnings = TRUE, recursive = TRUE)
+    write_csv(metric_table_wide, 
+              file.path(outdir, paste0(metric_input, ".csv")))
   }
-  list(df = df, y_lab = y_lab, title = title, y_limits = y_limits, y_breaks = y_breaks)
+  
+  metric_table_wide
 }
 
+# GROUP SUMMARY VALUES ---------------------------------------------------------
+# Finds the average per treatment or sex-treatment x day.
+# Dependent on group_sexes.
 
-# Final clustered column chart ----
-
-plot_data  <- prepare_metric_grouped(metric_input, timeunit, strategy_df = strategygrouped)
-
-plot_df     <- plot_data$df
-y_lab       <- plot_data$y_lab
-plot_title  <- plot_data$title
-y_limits    <- plot_data$y_limits
-y_breaks    <- plot_data$y_breaks
-
-# Consistent dodging for bars/error bars
-dodge <- position_dodge(width = 0.8)
-
-# Fill/group factor with explicit order for sexes+treatment
-if (groupsexes) {
-  color_group <- interaction(plot_df$Sex, plot_df$Treatment, sep = ".", drop = TRUE)
-  color_group <- factor(color_group, levels = c("M.Control", "M.ASO", "F.Control", "F.ASO"))
-} else {
-  color_group <- factor(plot_df$Treatment, levels = c("Control", "ASO"))
-}
-plot_df$color_group <- color_group
-
-# Rename "Test" to "Test Day"
-if ("Day" %in% names(plot_df)) {
-  plot_df$Day <- ifelse(plot_df$Day == "Test", "Test Day", plot_df$Day)
+summarise_groups <- function(metric_input,
+                             group_sexes,
+                             average_days) {
+  
+  master <- select_metric(metric_input, average_days)
+  
+  group_vars <- c("timepoint", "Treatment", if (group_sexes) "Sex")
+  
+  master %>%
+    group_by(across(all_of(group_vars))) %>%
+    summarise(
+      mean_value = mean(value, na.rm = TRUE),
+      n          = sum(!is.na(value)),
+      std_dev    = sd(value, na.rm = TRUE),
+      .groups    = "drop"
+    ) %>%
+    mutate(se = std_dev / sqrt(n))
 }
 
-# Base ggplot
-p <- ggplot(
-  plot_df,
-  aes(
-    x     = .data[[timeunit]],
-    y     = mean_value,
-    fill  = color_group,
-    group = color_group
-  )
-)
+# GRAPHING PARAMETERS ----------------------------------------------------------
+# Finds labels and breaks for axes. Returns as a list.
 
-# Conditional pattern mapping to avoid missing 'Sex' when groupsexes == FALSE ----
-if (groupsexes) {
-  p <- p +
-    geom_col_pattern(
-      position        = dodge,
-      width           = 0.7,
-      aes(pattern = Sex, color = color_group),
-      pattern_fill    = "white",
-      pattern_colour  = NA,
-      pattern_angle   = 45,
-      pattern_spacing = 0.03,
-      pattern_density = 0.4
+set_graphing_parameters <- function(metric_input, average_days) {
+  
+  x_lab <- if (average_days)
+    "Training Day"
+  else
+    "Training Session"
+  
+  if (metric_input == "latency_total") {
+    list(
+      title = "Total Latency",
+      y_lab = "Time (s)",
+      y_limits = c(0, 110),
+      y_breaks = seq(0, 100, by = 20),
+      x_lab = x_lab
     )
-} else {
-  p <- p +
-    geom_col_pattern(
-      position        = dodge,
-      width           = 0.7,
-      aes(color = color_group),
-      pattern         = "none",
-      pattern_fill    = "white",
-      pattern_colour  = NA
+  } else if (metric_input == "latency_primary") {
+    list(
+      title = "Primary Latency",
+      y_lab = "Time (s)",
+      y_limits = c(0, 80),
+      y_breaks = seq(0, 80, by = 20),
+      x_lab = x_lab
     )
+  } else if (metric_input == "pathlength_total") {
+    list(
+      title = "Total Path Length",
+      y_lab = "Distance (m)",
+      y_limits = c(0, 12),
+      y_breaks = seq(0, 12, by = 2), 
+      x_lab = x_lab
+    )
+  } else if (metric_input == "pathlength_primary") {
+    list(
+      title = "Primary Path Length",
+      y_lab = "Distance (m)",
+      y_limits = NULL,
+      y_breaks = waiver(),
+      x_lab = x_lab
+    )
+  } else if (metric_input == "strategy") {
+    list(
+      title = "Search Strategy",
+      y_lab = "Score",
+      y_limits = c(0, 11),
+      y_breaks = 0:11,
+      x_lab = x_lab
+    )
+  } else if (metric_input == "errors_total") {
+    list(
+      title = "Total Errors",
+      y_lab = "Count",
+      y_limits = NULL,
+      y_breaks = waiver(),
+      x_lab = x_lab
+    )
+  } else if (metric_input == "errors_primary") {
+    list(
+      title = "Primary Errors",
+      y_lab = "Count",
+      y_limits = NULL,
+      y_breaks = waiver(),
+      x_lab = x_lab
+    )
+  } else {
+    print("Ensure your metric input is one of the available options.")
+  }
 }
 
-
-p <- p +
-  geom_errorbar(
-    aes(
-      ymin = mean_value - .data[[errorbars]],
-      ymax = mean_value + .data[[errorbars]]
-    ),
-    width = 0.3,
-    linewidth = 0.75,
-    position = dodge
-  ) +
-  geom_hline(yintercept = 0, color = "black", linewidth = 0.5) +
-  theme_minimal(base_family = "serif") +
-  scale_y_continuous(
-    limits = y_limits,
-    breaks = y_breaks,
-    expand = expansion(mult = c(0, 0.02))
-  ) +
-  theme(
-    axis.line          = element_line(color = "black"),
-    panel.grid.minor   = element_blank(),
-    panel.grid.major   = element_blank(),
-    axis.ticks         = element_line(color = "black"),
-    axis.ticks.length  = unit(6, "points"),
-    axis.title         = element_text(color = "black", size = 12, face = "bold"),
-    axis.text          = element_text(color = "black", size = 12),
-    plot.title         = element_text(color = "black", size = 14, face = "bold", hjust = 0.5),
-    legend.position    = "none"
-  ) +
-  labs(
-    x     = x_lab,
-    y     = y_lab,
-    title = plot_title
-  ) +
-  scale_fill_manual(
-    values = my_colors,
-    labels = if (groupsexes)
-      c("Male Control", "Male ASO", "Female Control", "Female ASO")
-    else
-      c("Control", "ASO"),
-    name   = if (groupsexes) "Sex and Treatment" else "Treatment"
-  ) +
-  scale_color_manual(
-    values = my_colors
+# GRAPH ------------------------------------------------------------------------
+make_graph <- function(metric_input,
+                       average_days = TRUE,
+                       group_sexes  = TRUE,
+                       save_graph   = FALSE,
+                       graph_dir    = "barnes_graph",
+                       save_summary_csv     = FALSE,
+                       summary_csv_dir      = "barnes_summary_csv") {
+  
+  # Consistent dodging for bars/error bars
+  dodge <- position_dodge(width = 0.8)
+  
+  # Summarised data for plot ----
+  plot_df <- summarise_groups(metric_input, group_sexes, average_days)
+  
+  # Get all graphing parameters from helper function.
+  parameters <- set_graphing_parameters(metric_input, average_days)
+  y_lab      <- parameters$y_lab
+  plot_title <- parameters$title
+  y_limits   <- parameters$y_limits
+  y_breaks   <- parameters$y_breaks
+  x_lab      <- parameters$x_lab
+  
+  # Grouping and factor order ----
+  if (group_sexes) {
+    plot_df <- plot_df %>%
+      mutate(Sex = factor(Sex, levels = c("M", "F")),
+             Treatment = factor(Treatment, levels = c("Control", "ASO")))
+    colour_group <- with(plot_df, interaction(Sex, Treatment, sep = ".", drop = TRUE))
+    colour_group <- factor(colour_group,
+                           levels = c("M.Control", "M.ASO", "F.Control", "F.ASO"))
+  } else {
+    plot_df <- plot_df %>%
+      mutate(Treatment = factor(Treatment, levels = c("Control", "ASO")))
+    colour_group <- plot_df$Treatment
+  }
+  plot_df$colour_group <- colour_group
+  
+  # Colours
+  my_colors <- c(
+    "F.Control" = "#FF8000",
+    "M.Control" = "#00FF00",
+    "F.ASO"     = "#FF0000",
+    "M.ASO"     = "#0000FF",
+    "Control"   = "#808080",
+    "ASO"       = "#800080" 
   )
 
-# Only add pattern scale when mapping to Sex
-if (groupsexes) {
-  p <- p + scale_pattern_manual(values = my_patterns)
-  # else: no pattern scale needed when pattern is constant "none"
-}
-
-print(p)
-
-# Save graph or summary csv files ----
     
-if (savegraph == TRUE) {
-  ggsave(
-    filename = paste0("Graphs/StyledForSaba/",
-                      metric_input,
-                      ifelse(groupsexes, "", "-Treat"),
-                      ".pdf"),
-    plot = last_plot(),
-    device = "pdf",
-    width = 14,
-    height = 10,
-    units = "cm"
+  # Base plot ----
+  p <- ggplot(
+    plot_df,
+    aes(
+      x     = .data$timepoint,
+      y     = .data$mean_value,
+      fill  = colour_group,
+      group = colour_group
+    )
   )
-  print("Graph saved!")
+  
+  # Bars ----
+  # Edit my_patterns to set a sex-specific pattern
+  if (group_sexes) {
+    my_patterns <- c("F" = "stripe", "M" = "none")
+    p <- p +
+      geom_col_pattern(
+        position        = dodge,
+        width           = 0.6,
+        alpha           = 0.5,
+        linewidth       = 1,
+        aes(pattern     = .data$Sex, color = colour_group),
+        pattern_fill    = "white",
+        pattern_colour  = NA,
+        pattern_angle   = 45,
+        pattern_spacing = 0.03,
+        pattern_density = 0.4
+      )
+  } else {
+    p <- p +
+      geom_col_pattern(
+        position       = dodge,
+        width          = 0.6,
+        alpha          = 0.5,
+        linewidth      = 1,
+        aes(color      = colour_group),
+        pattern        = "none"
+      )
+  }
+  
+  # Error bars
+  p <- p +
+    geom_errorbar(
+      aes(
+        ymin = .data$mean_value - .data$se,
+        ymax = .data$mean_value + .data$se
+      ),
+      width     = 0.3,
+      linewidth = 0.75,
+      position  = dodge
+    ) +
+    geom_hline(yintercept = 0, color = "black", linewidth = 0.5) +
+    theme_minimal(base_family = "sans") +
+    scale_y_continuous(
+      limits = y_limits,
+      breaks = y_breaks,
+      expand = expansion(mult = c(0, 0.02))
+    ) +
+    theme(
+      axis.line         = element_line(color = "black"),
+      panel.grid.minor  = element_blank(),
+      panel.grid.major  = element_blank(),
+      axis.ticks        = element_line(color = "black"),
+      axis.ticks.length = unit(6, "points"),
+      axis.title        = element_text(color = "black", size = 12, face = "bold"),
+      axis.text         = element_text(color = "black", size = 12),
+      plot.title        = element_text(color = "black", size = 14, face = "bold", hjust = 0.5),
+      legend.position   = "none"
+    ) +
+    labs(
+      x     = x_lab,
+      y     = y_lab,
+      title = plot_title
+    ) +
+    scale_fill_manual(values = my_colors) +
+    scale_color_manual(values = my_colors)
+  
+  if (group_sexes) {
+    p <- p + scale_pattern_manual(
+      values = c("M" = "none", 
+                 "F" = "none")
+      )
+  }
+  
+  # Print and optionally save
+  print(p)
+  
+  if (save_graph) {
+    dir.create(graph_dir, showWarnings = FALSE, recursive = TRUE)
+    ggsave(
+      filename = file.path(
+        graph_dir,
+        paste0(metric_input, ifelse(group_sexes, "", "-Treat"), ".pdf")
+      ),
+      plot   = p,
+      device = "pdf",
+      width  = 14,
+      height = 10,
+      units  = "cm"
+    )
+    message("Graph saved.")
+  }
+  
+  if (save_summary_csv) {
+    dir.create(summary_csv_dir, showWarnings = FALSE, recursive = TRUE)
+    out_name <- paste0(metric_input, ifelse(average_days, "_day", "_train"), ".csv")
+    write_csv(plot_df, file = file.path(summary_csv_dir, out_name))
+    message("Plot data CSV saved.")
+  }
 }
 
-if (savecsv == TRUE) {
-  write_csv(plot_df,
-            file = paste0("ExportCSVs/", metric_input,
-                          ifelse(show_days, "_day", "_train"),
-                          ".csv"))
-}
-
-
-# Export Prism csv ----
-
-# Select appropriate all-datapoint dataframe based on metric_input 
-# "pathlength", "latency_primary", "latency_total", "strategy"
-df <- if (metric_input == "strategy") {df_in_results} else
-  if (metric_input == "latency_primary") {primarylatency_days} else
-    if (metric_input == "latency_total") {totallatency_days} else
-      if (metric_input == "pathlength") {pathlength_days}
-
-# Find the name of the value column
-valuecolumn <- colnames(df)[colnames(df) %in% c("VALUE", "score", "START.TIME")]
-
-# 1) Order days: numerics first (1, 2, 3, ...), then any non-numeric labels (e.g., "Test", "Probe")
-day_levels <- df %>%
-  mutate(Day_num = suppressWarnings(as.numeric(Day)),
-         is_special = ifelse(is.na(Day_num), 1L, 0L)) %>%
-  arrange(is_special, Day_num, Day) %>%
-  distinct(Day) %>%
-  pull(Day)
-
-# 2) Normalize Treatment order: Control first, then ASO
-df2 <- df %>%
-  mutate(
-    Day = factor(Day, levels = day_levels),
-    Treatment = factor(Treatment, levels = c("Control", "ASO")),
-    col_label = paste(Sex, RatID, sep = "_")  # e.g., "M_rat01"
+# LOOP TO ANALYSE ALL DATA =====================================================
+if (export_all) {
+  metrics <- c(
+    "latency_total",
+    "latency_primary",
+    "pathlength_total",
+    "pathlength_primary",
+    "strategy",
+    "errors_primary",
+    "errors_total"
   )
-
-# 3) Prepare deterministic column orders within each Treatment block (by Sex, then RatID)
-col_order_control <- df2 %>%
-  filter(Treatment == "Control") %>%
-  distinct(Sex, RatID) %>%
-  arrange(Sex, RatID) %>%
-  transmute(name = paste("Control", paste(Sex, RatID, sep = "_"), sep = "_")) %>%
-  pull(name)
-
-col_order_treatment <- df2 %>%
-  filter(Treatment == "ASO") %>%
-  distinct(Sex, RatID) %>%
-  arrange(Sex, RatID) %>%
-  transmute(name = paste("ASO", paste(Sex, RatID, sep = "_"), sep = "_")) %>%
-  pull(name)
-
-# 4) Pivot to wide. If there were any duplicate Day×Rat rows, average them.
-wide_prism <- df2 %>%
-  select(Day, Treatment, col_label, !!sym(valuecolumn)) %>%
-  pivot_wider(
-    names_from  = c(Treatment, col_label),
-    values_from = !!sym(valuecolumn),
-    values_fn   = mean # safely handle any accidental duplicates
-  ) %>%
-  arrange(Day) %>%
-  # enforce the Control block first, then Treatment, each sorted by Sex then RatID
-  select(Day, all_of(col_order_control), all_of(col_order_treatment))
-
-# 5) (Optional) write to CSV for Prism
-if (saveprismcsv) {
-  write_csv(wide_prism, paste0("PrismCSV/",metric_input,".csv"))}
+  
+  for (metric_input in metrics) {
+    export_prism(metric_input)
+    
+    make_graph(metric_input,
+               save_graph = TRUE,
+               save_summary_csv = TRUE)
+  }
+}
