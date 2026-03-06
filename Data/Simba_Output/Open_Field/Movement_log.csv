@@ -1,65 +1,65 @@
-VIDEO,ANIMAL,BODY-PART,MEASURE,VALUE
-Dory_OpenField_rat16,Animal_1,GRAVITY CENTER,Distance (cm),7261.2659338023495
-Dory_OpenField_rat16,Animal_1,GRAVITY CENTER,Velocity (cm/s),11.620410041230087
-Dory_OpenField_rat02,Animal_1,GRAVITY CENTER,Distance (cm),5982.817662346782
-Dory_OpenField_rat02,Animal_1,GRAVITY CENTER,Velocity (cm/s),9.573943094227523
-Dory_OpenField_rat03,Animal_1,GRAVITY CENTER,Distance (cm),6470.313681636452
-Dory_OpenField_rat03,Animal_1,GRAVITY CENTER,Velocity (cm/s),10.355554932152083
-Dory_OpenField_rat17,Animal_1,GRAVITY CENTER,Distance (cm),6494.783148948785
-Dory_OpenField_rat17,Animal_1,GRAVITY CENTER,Velocity (cm/s),10.39669066876917
-Dory_OpenField_rat29,Animal_1,GRAVITY CENTER,Distance (cm),6841.333184184489
-Dory_OpenField_rat29,Animal_1,GRAVITY CENTER,Velocity (cm/s),15.586300022491992
-Dory_OpenField_rat01,Animal_1,GRAVITY CENTER,Distance (cm),6704.341121940595
-Dory_OpenField_rat01,Animal_1,GRAVITY CENTER,Velocity (cm/s),10.728324261925506
-Dory_OpenField_rat15,Animal_1,GRAVITY CENTER,Distance (cm),7985.718395278268
-Dory_OpenField_rat15,Animal_1,GRAVITY CENTER,Velocity (cm/s),12.779891185148585
-Dory_OpenField_rat14,Animal_1,GRAVITY CENTER,Distance (cm),5270.088936736327
-Dory_OpenField_rat14,Animal_1,GRAVITY CENTER,Velocity (cm/s),8.433627372139753
-Dory_OpenField_rat28,Animal_1,GRAVITY CENTER,Distance (cm),7779.474161369374
-Dory_OpenField_rat28,Animal_1,GRAVITY CENTER,Velocity (cm/s),12.448741705456822
-Dory_OpenField_rat04,Animal_1,GRAVITY CENTER,Distance (cm),7773.885931439103
-Dory_OpenField_rat04,Animal_1,GRAVITY CENTER,Velocity (cm/s),12.440215635730743
-Dory_OpenField_rat10,Animal_1,GRAVITY CENTER,Distance (cm),7746.023781408464
-Dory_OpenField_rat10,Animal_1,GRAVITY CENTER,Velocity (cm/s),12.396439829685338
-Dory_OpenField_rat11,Animal_1,GRAVITY CENTER,Distance (cm),7820.591847111599
-Dory_OpenField_rat11,Animal_1,GRAVITY CENTER,Velocity (cm/s),12.514840060695335
-Dory_OpenField_rat05,Animal_1,GRAVITY CENTER,Distance (cm),7745.118454590684
-Dory_OpenField_rat05,Animal_1,GRAVITY CENTER,Velocity (cm/s),12.3995611947367
-Dory_OpenField_rat13,Animal_1,GRAVITY CENTER,Distance (cm),6138.092331711532
-Dory_OpenField_rat13,Animal_1,GRAVITY CENTER,Velocity (cm/s),9.823078369636589
-Dory_OpenField_rat07,Animal_1,GRAVITY CENTER,Distance (cm),6331.573809613135
-Dory_OpenField_rat07,Animal_1,GRAVITY CENTER,Velocity (cm/s),10.13550108075478
-Dory_OpenField_rat06,Animal_1,GRAVITY CENTER,Distance (cm),6111.658333907949
-Dory_OpenField_rat06,Animal_1,GRAVITY CENTER,Velocity (cm/s),9.779968682516712
-Dory_OpenField_rat12,Animal_1,GRAVITY CENTER,Distance (cm),6209.742893853496
-Dory_OpenField_rat12,Animal_1,GRAVITY CENTER,Velocity (cm/s),10.05697892374508
-Dory_OpenField_rat23,Animal_1,GRAVITY CENTER,Distance (cm),6356.39365674597
-Dory_OpenField_rat23,Animal_1,GRAVITY CENTER,Velocity (cm/s),10.1724469152487
-Dory_OpenField_rat22,Animal_1,GRAVITY CENTER,Distance (cm),7075.208769450012
-Dory_OpenField_rat22,Animal_1,GRAVITY CENTER,Velocity (cm/s),11.322730970451541
-Dory_OpenField_rat08,Animal_1,GRAVITY CENTER,Distance (cm),6710.6641646736025
-Dory_OpenField_rat08,Animal_1,GRAVITY CENTER,Velocity (cm/s),10.737749330114765
-Dory_OpenField_rat20,Animal_1,GRAVITY CENTER,Distance (cm),7361.040802520845
-Dory_OpenField_rat20,Animal_1,GRAVITY CENTER,Velocity (cm/s),12.375280748265126
-Dory_OpenField_rat21,Animal_1,GRAVITY CENTER,Distance (cm),12781.653651283752
-Dory_OpenField_rat21,Animal_1,GRAVITY CENTER,Velocity (cm/s),20.452445963227866
-Dory_OpenField_rat09,Animal_1,GRAVITY CENTER,Distance (cm),7522.259031628923
-Dory_OpenField_rat09,Animal_1,GRAVITY CENTER,Velocity (cm/s),12.03634173780396
-Dory_OpenField_rat25,Animal_1,GRAVITY CENTER,Distance (cm),8589.344955702947
-Dory_OpenField_rat25,Animal_1,GRAVITY CENTER,Velocity (cm/s),13.745844601492323
-Dory_OpenField_rat31,Animal_1,GRAVITY CENTER,Distance (cm),6424.1402113684535
-Dory_OpenField_rat31,Animal_1,GRAVITY CENTER,Velocity (cm/s),10.283361033064427
-Dory_OpenField_rat19,Animal_1,GRAVITY CENTER,Distance (cm),7086.755494802183
-Dory_OpenField_rat19,Animal_1,GRAVITY CENTER,Velocity (cm/s),12.483692238853182
-Dory_OpenField_rat18,Animal_1,GRAVITY CENTER,Distance (cm),7162.978799064025
-Dory_OpenField_rat18,Animal_1,GRAVITY CENTER,Velocity (cm/s),11.462588564771085
-Dory_OpenField_rat30,Animal_1,GRAVITY CENTER,Distance (cm),7855.1710249255
-Dory_OpenField_rat30,Animal_1,GRAVITY CENTER,Velocity (cm/s),10.47435471564914
-Dory_OpenField_rat24,Animal_1,GRAVITY CENTER,Distance (cm),7351.422794222324
-Dory_OpenField_rat24,Animal_1,GRAVITY CENTER,Velocity (cm/s),11.763282355615303
-Dory_OpenField_rat32,Animal_1,GRAVITY CENTER,Distance (cm),6871.7283332496245
-Dory_OpenField_rat32,Animal_1,GRAVITY CENTER,Velocity (cm/s),10.99739237856614
-Dory_OpenField_rat26,Animal_1,GRAVITY CENTER,Distance (cm),16492.831539271403
-Dory_OpenField_rat26,Animal_1,GRAVITY CENTER,Velocity (cm/s),26.401952693142317
-Dory_OpenField_rat27,Animal_1,GRAVITY CENTER,Distance (cm),22196.747774998847
-Dory_OpenField_rat27,Animal_1,GRAVITY CENTER,Velocity (cm/s),35.53424278639902
+VIDEO,ANIMAL,BODY-PART,MEASUREMENT,VALUE
+Dory_OpenField_rat16,Animal_1,Center,Distance (cm),4103.184168038874
+Dory_OpenField_rat16,Animal_1,Center,Velocity (cm/s),6.620911614597475
+Dory_OpenField_rat02,Animal_1,Center,Distance (cm),2750.3846140489086
+Dory_OpenField_rat02,Animal_1,Center,Velocity (cm/s),4.487324165524585
+Dory_OpenField_rat03,Animal_1,Center,Distance (cm),2793.6872122481136
+Dory_OpenField_rat03,Animal_1,Center,Velocity (cm/s),4.559208394868527
+Dory_OpenField_rat17,Animal_1,Center,Distance (cm),3089.5016573362977
+Dory_OpenField_rat17,Animal_1,Center,Velocity (cm/s),4.967922931754071
+Dory_OpenField_rat29,Animal_1,Center,Distance (cm),1799.9777041708985
+Dory_OpenField_rat29,Animal_1,Center,Velocity (cm/s),4.2353337064809935
+Dory_OpenField_rat01,Animal_1,Center,Distance (cm),3544.7312261627144
+Dory_OpenField_rat01,Animal_1,Center,Velocity (cm/s),5.736053466807529
+Dory_OpenField_rat15,Animal_1,Center,Distance (cm),3947.4289568558333
+Dory_OpenField_rat15,Animal_1,Center,Velocity (cm/s),6.419222261032984
+Dory_OpenField_rat14,Animal_1,Center,Distance (cm),2914.504023017608
+Dory_OpenField_rat14,Animal_1,Center,Velocity (cm/s),4.762521194178522
+Dory_OpenField_rat28,Animal_1,Center,Distance (cm),3712.7008113433512
+Dory_OpenField_rat28,Animal_1,Center,Velocity (cm/s),6.047729558893219
+Dory_OpenField_rat04,Animal_1,Center,Distance (cm),4064.6542365515184
+Dory_OpenField_rat04,Animal_1,Center,Velocity (cm/s),6.599235400430388
+Dory_OpenField_rat10,Animal_1,Center,Distance (cm),3519.2550203943365
+Dory_OpenField_rat10,Animal_1,Center,Velocity (cm/s),5.714844274731345
+Dory_OpenField_rat11,Animal_1,Center,Distance (cm),4010.55375117247
+Dory_OpenField_rat11,Animal_1,Center,Velocity (cm/s),6.479085219987835
+Dory_OpenField_rat05,Animal_1,Center,Distance (cm),4047.4588771926983
+Dory_OpenField_rat05,Animal_1,Center,Velocity (cm/s),6.631831131741624
+Dory_OpenField_rat13,Animal_1,Center,Distance (cm),3483.6179105495075
+Dory_OpenField_rat13,Animal_1,Center,Velocity (cm/s),5.646332241044737
+Dory_OpenField_rat07,Animal_1,Center,Distance (cm),3119.4460653568894
+Dory_OpenField_rat07,Animal_1,Center,Velocity (cm/s),5.078087589590036
+Dory_OpenField_rat06,Animal_1,Center,Distance (cm),3423.003164736995
+Dory_OpenField_rat06,Animal_1,Center,Velocity (cm/s),5.499002928792624
+Dory_OpenField_rat12,Animal_1,Center,Distance (cm),3029.2847987515956
+Dory_OpenField_rat12,Animal_1,Center,Velocity (cm/s),5.153512881109947
+Dory_OpenField_rat23,Animal_1,Center,Distance (cm),3311.2600340058025
+Dory_OpenField_rat23,Animal_1,Center,Velocity (cm/s),5.404171120092306
+Dory_OpenField_rat22,Animal_1,Center,Distance (cm),3703.6795714693058
+Dory_OpenField_rat22,Animal_1,Center,Velocity (cm/s),6.044065532326595
+Dory_OpenField_rat08,Animal_1,Center,Distance (cm),3767.112068875141
+Dory_OpenField_rat08,Animal_1,Center,Velocity (cm/s),6.135417957726474
+Dory_OpenField_rat20,Animal_1,Center,Distance (cm),4206.813303892007
+Dory_OpenField_rat20,Animal_1,Center,Velocity (cm/s),7.261607496391846
+Dory_OpenField_rat21,Animal_1,Center,Distance (cm),3290.0820972320957
+Dory_OpenField_rat21,Animal_1,Center,Velocity (cm/s),5.346598008749012
+Dory_OpenField_rat09,Animal_1,Center,Distance (cm),3451.7528541363163
+Dory_OpenField_rat09,Animal_1,Center,Velocity (cm/s),5.77220033804
+Dory_OpenField_rat25,Animal_1,Center,Distance (cm),3252.5972771522497
+Dory_OpenField_rat25,Animal_1,Center,Velocity (cm/s),8.705032628205092
+Dory_OpenField_rat31,Animal_1,Center,Distance (cm),3192.2029041130722
+Dory_OpenField_rat31,Animal_1,Center,Velocity (cm/s),5.404115776480339
+Dory_OpenField_rat19,Animal_1,Center,Distance (cm),3674.239468210087
+Dory_OpenField_rat19,Animal_1,Center,Velocity (cm/s),6.668311194573661
+Dory_OpenField_rat18,Animal_1,Center,Distance (cm),3545.3142973987888
+Dory_OpenField_rat18,Animal_1,Center,Velocity (cm/s),5.862912791545776
+Dory_OpenField_rat30,Animal_1,Center,Distance (cm),4014.721813356174
+Dory_OpenField_rat30,Animal_1,Center,Velocity (cm/s),5.378594275905229
+Dory_OpenField_rat24,Animal_1,Center,Distance (cm),3969.0397191396637
+Dory_OpenField_rat24,Animal_1,Center,Velocity (cm/s),6.539304645764224
+Dory_OpenField_rat32,Animal_1,Center,Distance (cm),3971.763148709347
+Dory_OpenField_rat32,Animal_1,Center,Velocity (cm/s),6.38309789362254
+Dory_OpenField_rat26,Animal_1,Center,Distance (cm),3156.936172127026
+Dory_OpenField_rat26,Animal_1,Center,Velocity (cm/s),5.213109492441253
+Dory_OpenField_rat27,Animal_1,Center,Distance (cm),4361.640491199481
+Dory_OpenField_rat27,Animal_1,Center,Velocity (cm/s),7.236437576236937
