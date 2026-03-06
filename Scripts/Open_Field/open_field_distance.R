@@ -66,7 +66,7 @@ data$Treatment <- factor(key$Treatment[match(data$RatID, key$RatID)],
                          levels = c("Control", "ASO"))
 
 # Keeping only necessary columns
-df <- subset(data, select = c(RatID, VALUE, MEASURE, Sex, Treatment)) 
+df <- subset(data, select = c(RatID, VALUE, MEASUREMENT, Sex, Treatment)) 
 
 df <- arrange(df,RatID)
 
@@ -74,7 +74,7 @@ df <- arrange(df,RatID)
 of <- data %>%
   pivot_wider(
     id_cols = c(RatID, Sex, Treatment),
-    names_from = MEASURE,
+    names_from = MEASUREMENT,
     values_from = VALUE
   )
 
