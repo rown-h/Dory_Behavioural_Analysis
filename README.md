@@ -20,7 +20,7 @@ $\textrm{\% Inner} = \frac{(\textrm{Duration in Inner ROI})}{(\textrm{Duration i
 </p>
 
 
-![Inner zone is the four inner squares](Images/open_field_roi.png)
+![Inner zone is the four inner squares](Images/open_field.svg)
 
 **Figure 2: Inner zone for open field test.**
 
@@ -35,6 +35,9 @@ $\textrm{DI}_{\textrm{phase 2}} = \frac{t_\textrm{novel}-t_\textrm{familiar}}{t_
 </p>
 
 Thus, in phase 2, positive values indicate  greater proportion of time interacting with the novel object/location, whereas negative values show more time spent with the familiar object/location. GraphPad Prism (version 10.6.1) was then used to conduct two-way ANOVAs, assess normality, exclude outliers ([ROUT method](https://doi.org/10.1186/1471-2105-7-123), Q = 1%), determine statistical significance (Šídák's multiple comparisons, α = 0.05), and graph the results.
+
+![Novel object recognition and object location task set-up](Images/NOR_OLT.svg)
+
 
 ### Barnes Maze
 To analyse the Barnes maze, ROIs were drawn around each of its 18 holes in SimBA. The aggregate ROI data, detailed sequences, and path lengths were outputted for analysis. Desciptions of each of the seven measures used for Barnes Maze analysis are shown in Table 1. To reduce inaccuracies due to occasional body part tracking errors in DeepLabCut, each ROI-based measure was calculated separately with tracking for nose, left ear, and right ear (referred to below as 'head'). For search strategy, the maximum score was awarded, whereas for all other measures, the median of the three values was awarded. These approaches were validated on a subset of 32 videos, and were seen to achieve more accurate results than tracking the nose alone or averaging between body parts. These metrics were each determined in R, and exported to GraphPad Prism.
