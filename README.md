@@ -22,7 +22,7 @@ $\textrm{\% Inner} = \frac{(\textrm{Duration in Inner ROI})}{(\textrm{Duration i
 
 ![Inner zone is the four inner squares](Images/open_field.svg)
 
-**Figure 2: Inner zone for open field test.**
+**Figure 2: Inner zone for open field test.** On right, example path plot (rat08 open field test).
 
 #### Novel Object Recognition and Object Location Tests
 To analyse NOR and OLT, SimBA ROIs were drawn around the objects, and models were trained to classify object directed interaction. Interaction was defined as the rat being within 2 cm of an object with its nose oriented toward it. Frames in which rats were resting on or rearing against the object were excluded from the positive class. A total of 21 videos were manually annotated for model training (315,000 frames total, with ~11,000 frames in the positive class for each behaviour), and 20% of frames were held out as a test set. A Random Forest classifier (2,000 estimators) was trained using SimBA’s default feature extraction pipeline. After classification, a minimum bout length of 250 ms was applied to reduce spurious detections. Automated predictions were verified by both comparison of numerical output to a manually scored subset of videos, and inspection of machine-labelled videos.
@@ -37,7 +37,7 @@ $\textrm{DI}_{\textrm{phase 2}} = \frac{t_\textrm{novel}-t_\textrm{familiar}}{t_
 Thus, in phase 2, positive values indicate  greater proportion of time interacting with the novel object/location, whereas negative values show more time spent with the familiar object/location. GraphPad Prism (version 10.6.1) was then used to conduct two-way ANOVAs, assess normality, exclude outliers ([ROUT method](https://doi.org/10.1186/1471-2105-7-123), Q = 1%), determine statistical significance (Šídák's multiple comparisons, α = 0.05), and graph the results.
 
 ![Novel object recognition and object location task set-up](Images/NOR_OLT.svg)
-
+**Figure 3: Experimental set-up for NOR and OLT.** Note, both the objects and the novel sides were counterbalanced to account for any intrinsic object or location preferences.
 
 ### Barnes Maze
 To analyse the Barnes maze, ROIs were drawn around each of its 18 holes in SimBA. The aggregate ROI data, detailed sequences, and path lengths were outputted for analysis. Desciptions of each of the seven measures used for Barnes Maze analysis are shown in Table 1. To reduce inaccuracies due to occasional body part tracking errors in DeepLabCut, each ROI-based measure was calculated separately with tracking for nose, left ear, and right ear (referred to below as 'head'). For search strategy, the maximum score was awarded, whereas for all other measures, the median of the three values was awarded. These approaches were validated on a subset of 32 videos, and were seen to achieve more accurate results than tracking the nose alone or averaging between body parts. These metrics were each determined in R, and exported to GraphPad Prism.
