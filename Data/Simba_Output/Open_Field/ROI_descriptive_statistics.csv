@@ -1,65 +1,65 @@
-VIDEO,ANIMAL,BODY-PART,SHAPE,SHAPE TYPE,MEASUREMENT,VALUE,
-Dory_OpenField_rat01,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),6.522609044,
-Dory_OpenField_rat01,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),593.557423,
-Dory_OpenField_rat02,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),9.523809524,
-Dory_OpenField_rat02,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),590.5562225,
-Dory_OpenField_rat03,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),3.601440576,
-Dory_OpenField_rat03,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),596.5186074,
-Dory_OpenField_rat04,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),31.29251701,
-Dory_OpenField_rat04,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),568.787515,
-Dory_OpenField_rat05,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),22.4889956,
-Dory_OpenField_rat05,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),577.5910364,
-Dory_OpenField_rat06,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),15.36614646,
-Dory_OpenField_rat06,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),584.7138856,
-Dory_OpenField_rat07,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),14.28571429,
-Dory_OpenField_rat07,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),585.7943177,
-Dory_OpenField_rat08,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),8.083233293,
-Dory_OpenField_rat08,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),591.9967987,
-Dory_OpenField_rat09,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),7.643057223,
-Dory_OpenField_rat09,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),592.4769908,
-Dory_OpenField_rat10,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.162064826,
-Dory_OpenField_rat10,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),594.9179672,
-Dory_OpenField_rat11,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.242096839,
-Dory_OpenField_rat11,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),594.8779512,
-Dory_OpenField_rat12,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.882352941,
-Dory_OpenField_rat12,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),587.0348139,
-Dory_OpenField_rat13,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),11.08443377,
-Dory_OpenField_rat13,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),589.0356142,
-Dory_OpenField_rat14,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),16.80672269,
-Dory_OpenField_rat14,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),583.2733093,
-Dory_OpenField_rat15,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.362144858,
-Dory_OpenField_rat15,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),594.7178872,
-Dory_OpenField_rat16,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),24.12965186,
-Dory_OpenField_rat16,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),575.9503802,
-Dory_OpenField_rat17,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),6.282513005,
-Dory_OpenField_rat17,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),593.797519,
-Dory_OpenField_rat18,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),1.800720288,
-Dory_OpenField_rat18,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),598.3193277,
-Dory_OpenField_rat19,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),12.52501,
-Dory_OpenField_rat19,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),532.5730292,
-Dory_OpenField_rat20,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),25.97038816,
-Dory_OpenField_rat20,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),545.3381353,
-Dory_OpenField_rat21,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),18.04721889,
-Dory_OpenField_rat21,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),582.0728291,
-Dory_OpenField_rat22,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),25.73029212,
-Dory_OpenField_rat22,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),574.3897559,
-Dory_OpenField_rat23,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),10.68427371,
-Dory_OpenField_rat23,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),589.3957583,
-Dory_OpenField_rat24,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),6.722689076,
-Dory_OpenField_rat24,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),593.3573429,
-Dory_OpenField_rat25,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.362144858,
-Dory_OpenField_rat25,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),594.7579032,
-Dory_OpenField_rat26,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),26.49059624,
-Dory_OpenField_rat26,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),573.5894358,
-Dory_OpenField_rat27,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.322128852,
-Dory_OpenField_rat27,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),594.7579032,
-Dory_OpenField_rat28,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),9.083633453,
-Dory_OpenField_rat28,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),590.9963986,
-Dory_OpenField_rat29,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),10.40416166,
-Dory_OpenField_rat29,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),411.0044018,
-Dory_OpenField_rat30,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),11.8847539,
-Dory_OpenField_rat30,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),708.4033613,
-Dory_OpenField_rat31,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),0.040016006,
-Dory_OpenField_rat31,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),600.040016,
-Dory_OpenField_rat32,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),47.33893557,
-Dory_OpenField_rat32,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),552.7410964,
+VIDEO,ANIMAL,BODY-PART,SHAPE,SHAPE TYPE,MEASUREMENT,VALUE
+Dory_OpenField_rat01,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),6.522609044
+Dory_OpenField_rat01,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),593.557423
+Dory_OpenField_rat02,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),9.523809524
+Dory_OpenField_rat02,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),590.5562225
+Dory_OpenField_rat03,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),3.601440576
+Dory_OpenField_rat03,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),596.5186074
+Dory_OpenField_rat04,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),31.29251701
+Dory_OpenField_rat04,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),568.787515
+Dory_OpenField_rat05,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),22.4889956
+Dory_OpenField_rat05,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),577.5910364
+Dory_OpenField_rat06,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),15.36614646
+Dory_OpenField_rat06,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),584.7138856
+Dory_OpenField_rat07,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),14.28571429
+Dory_OpenField_rat07,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),585.7943177
+Dory_OpenField_rat08,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),8.083233293
+Dory_OpenField_rat08,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),591.9967987
+Dory_OpenField_rat09,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),7.643057223
+Dory_OpenField_rat09,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),592.4769908
+Dory_OpenField_rat10,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.162064826
+Dory_OpenField_rat10,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),594.9179672
+Dory_OpenField_rat11,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.242096839
+Dory_OpenField_rat11,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),594.8779512
+Dory_OpenField_rat12,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.882352941
+Dory_OpenField_rat12,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),587.0348139
+Dory_OpenField_rat13,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),11.08443377
+Dory_OpenField_rat13,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),589.0356142
+Dory_OpenField_rat14,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),16.80672269
+Dory_OpenField_rat14,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),583.2733093
+Dory_OpenField_rat15,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.362144858
+Dory_OpenField_rat15,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),594.7178872
+Dory_OpenField_rat16,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),24.12965186
+Dory_OpenField_rat16,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),575.9503802
+Dory_OpenField_rat17,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),6.282513005
+Dory_OpenField_rat17,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),593.797519
+Dory_OpenField_rat18,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),1.800720288
+Dory_OpenField_rat18,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),598.3193277
+Dory_OpenField_rat19,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),12.52501
+Dory_OpenField_rat19,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),532.5730292
+Dory_OpenField_rat20,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),25.97038816
+Dory_OpenField_rat20,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),545.3381353
+Dory_OpenField_rat21,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),18.04721889
+Dory_OpenField_rat21,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),582.0728291
+Dory_OpenField_rat22,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),25.73029212
+Dory_OpenField_rat22,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),574.3897559
+Dory_OpenField_rat23,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),10.68427371
+Dory_OpenField_rat23,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),589.3957583
+Dory_OpenField_rat24,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),6.722689076
+Dory_OpenField_rat24,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),593.3573429
+Dory_OpenField_rat25,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.362144858
+Dory_OpenField_rat25,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),594.7579032
+Dory_OpenField_rat26,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),26.49059624
+Dory_OpenField_rat26,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),573.5894358
+Dory_OpenField_rat27,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),5.322128852
+Dory_OpenField_rat27,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),594.7579032
+Dory_OpenField_rat28,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),9.083633453
+Dory_OpenField_rat28,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),590.9963986
+Dory_OpenField_rat29,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),10.40416166
+Dory_OpenField_rat29,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),411.0044018
+Dory_OpenField_rat30,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),11.8847539
+Dory_OpenField_rat30,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),708.4033613
+Dory_OpenField_rat31,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),0.040016006
+Dory_OpenField_rat31,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),600.040016
+Dory_OpenField_rat32,Animal_1,Center,Inner,rectangle,TOTAL ROI TIME (S),47.33893557
+Dory_OpenField_rat32,Animal_1,Center,OUTSIDE REGIONS OF INTEREST,NONE,TOTAL ROI TIME (S),552.7410964
