@@ -81,8 +81,9 @@ of <- data %>%
   ) %>%
   
   # Calculate percent of time spent in the inner region
-  mutate(percentInner = Inner/Outer * 100) %>%
-  mutate(exploration = Inner + Outer)
+mutate(exploration = Inner + Outer) %>%  
+mutate(percentInner = Inner/exploration * 100)
+  
 
 # Arrange, and make 'st' (Sex-Treatment) column for x-axis
 of <- arrange(of,RatID)
