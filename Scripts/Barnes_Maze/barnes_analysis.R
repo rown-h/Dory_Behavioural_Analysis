@@ -41,7 +41,7 @@ aggregate_ROI_filepath     <- here('Data', 'Simba_Output', 'Barnes_Maze', 'ROI_d
 combine_bodyparts <- TRUE
 
 # Loop through all metrics and export both Prism CSV, summary CSV and graph.
-export_all <- FALSE
+export_all <- TRUE
 
 
 # INSTRUCTIONS =================================================================
@@ -65,7 +65,7 @@ export_all <- FALSE
     ## Saves a csv file with columns for each rat (arranged into treatment-sex
     ## groups) and rows for each training session or day to outdir.
     
-    ## outdir (default prism_csv)
+    ## outdir
     ## Directory to store .csv files.
 
 # Graphing ---------------------------------------------------------------------
@@ -95,7 +95,7 @@ export_all <- FALSE
     ## Saves the csv file with means for each day x treatment/sex-treatment
     ##  group, including stdev, n, standard error, to summary_csv_dir.
     
-    ## summary_csv_dir (default "barnes_summary_csv")
+    ## summary_csv_dir
     ## Directory to store summary csvs.
 
 # SCRIPT =======================================================================
@@ -301,7 +301,7 @@ select_metric <- function(metric_input, average_days) {
 export_prism <- function(metric_input,
                          average_days = TRUE,
                          save = TRUE,
-                         outdir = "prism_csv") {
+                         outdir = here('Output', 'Barnes_Maze', 'Prism_CSV')) {
   
   master <- select_metric(metric_input, average_days)
   
@@ -322,9 +322,10 @@ export_prism <- function(metric_input,
   
   # Optionally, write to CSV.
   if (save) {
-    dir.create(outdir, showWarnings = TRUE, recursive = TRUE)
+    dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
     write_csv(metric_table_wide, 
               file.path(outdir, paste0(metric_input, ".csv")))
+    message(paste("Prism CSV saved -", metric_input))
   }
   
   metric_table_wide
@@ -431,7 +432,7 @@ make_graph <- function(metric_input,
                        save_graph   = FALSE,
                        graph_dir    = here('Output', 'Barnes_Maze', 'Graphs'),
                        save_summary_csv     = FALSE,
-                       summary_csv_dir      = here('Output', 'Barnes_Maze', 'CSV')) {
+                       summary_csv_dir      = here('Output', 'Barnes_Maze', 'Summary_CSV')) {
   
   # Consistent dodging for bars/error bars
   dodge <- position_dodge(width = 0.8)
@@ -573,14 +574,14 @@ make_graph <- function(metric_input,
       height = 10,
       units  = "cm"
     )
-    message("Graph saved.")
+    message(paste("Graph saved -", metric_input))
   }
   
   if (save_summary_csv) {
     dir.create(summary_csv_dir, showWarnings = FALSE, recursive = TRUE)
     out_name <- paste0(metric_input, ifelse(average_days, "_day", "_train"), ".csv")
     write_csv(plot_df, file = file.path(summary_csv_dir, out_name))
-    message("Plot data CSV saved.")
+    message(paste("Summary data CSV saved -", metric_input))
   }
 }
 
