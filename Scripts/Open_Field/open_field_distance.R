@@ -10,21 +10,27 @@
 # For publication, CSVs from this script were exported to GraphPad Prism 10, for 
 # further statistical analysis, outlier removal and final graphing.
 
-workingdirectory <- 'Scripts/Open_Field'
-setwd(workingdirectory)
 rm(list = ls())
+
+
+# Packages ----
+library(here)
+library(tidyverse)
+library(ggpubr) # For adding p-values to plots (stat_compare_means)
+library(ggnewscale) # For colouring points and boxes separately
+
 
 # Inputs ----
 # Data selection
 RNA <- "Dory"
 test <- "distance_standardised" # "Velocity (cm/s)" or "distance_standardised"
 
-videolength <- if (RNA == "Dory"){600} else if (RNA == "Rodin"){900}
+videolength <- 600 # Total video duration in seconds
 
 # Filepaths
-keyfilepath <- 'Data/Reference_Tables/ratID_key.csv'
-simba_ROI_aggregates <- 'Data/Simba_Output/Open_Field/Movement_log.csv'
-videostoexclude <- 'Data/Reference_Tables/videos_to_exclude.csv'
+keyfilepath <- here('Data', 'Reference_Tables', 'ratID_key.csv')
+simba_ROI_aggregates <- here('Data', 'Simba_Output', 'Open_Field', 'Movement_log.csv')
+videostoexclude <- here('Data', 'Reference_Tables', 'videos_to_exclude.csv')
 
 # Graph settings
 discriminatesexes <- FALSE
@@ -33,12 +39,6 @@ perform_t_tests <- TRUE # Note: 2-way ANOVA required if sexes separated.
 # Export
 savegraph <- FALSE
 savecsv <- FALSE
-
-
-# Packages ----
-library(tidyverse)
-library(ggpubr) # For adding p-values to plots (stat_compare_means)
-library(ggnewscale) # For colouring points and boxes separately
 
 
 # Read files ----
@@ -148,7 +148,7 @@ p <- ggplot(data=of, aes(x = get(ifelse(discriminatesexes == TRUE, "st", "Treatm
 if (test == "distance_standardised"){
   p <- p +
     coord_cartesian(
-      ylim = c(0, ceiling(max(of$distance_standardised)/50)*50 + 100),
+      ylim = c(0, ceiling(max(of$distance_standardised)/50)*50+25),
       xlim = if (discriminatesexes) c(0, 5) else c(0,3),
       expand = c(bottom = FALSE)
     ) +
@@ -195,53 +195,29 @@ if (test == "distance_standardised"){
   )
   
  
-if (perform_t_tests){
-# Add comparisons, separated into 2 so that Male/Male and Female/Female can be plotted at same height
-if(discriminatesexes){
-  comparisons1 <- list(
-    c("M Control", "M ASO")
-  )
-  
-  comparisons2 <- list(
-    c("F Control", "F ASO"),
-    c("M ASO", "F ASO"),
-    c("M Control", "F Control")
-  )
-  
-} else {
-  
-  comparisons1 <- list(
-    c("Control", "ASO")
-  )
-}
-
-bracket.size = 1
-tip.length = 0.03
-step.increase = 0.1
-method = "t.test"
-label = "p.format"
-hide.ns = FALSE
-
-
-p <- p + stat_compare_means(comparisons = comparisons1,
-                              method = method,
-                              label = label,
-                              bracket.size = bracket.size,
-                              tip.length = tip.length,
-                              step.increase = step.increase,
-                              hide.ns = hide.ns)
-
-if (discriminatesexes){
-p <- p + stat_compare_means(comparisons = comparisons2,
-                              method = method,
-                              label = label,
-                              bracket.size = bracket.size,
-                              tip.length = tip.length,
-                              step.increase = step.increase,
-                              hide.ns = hide.ns)
-}
-}
-
+ if (perform_t_tests & (discriminatesexes == FALSE)) {
+   # Add comparisons
+   comparisons1 <- list(c("Control", "ASO"))
+   
+   bracket.size = 1
+   tip.length = 0.03
+   step.increase = 0.1
+   method = "t.test"
+   label = "p.format"
+   hide.ns = FALSE
+   
+   
+   p <- p + stat_compare_means(
+     comparisons = comparisons1,
+     method = method,
+     label = label,
+     bracket.size = bracket.size,
+     tip.length = tip.length,
+     step.increase = step.increase,
+     hide.ns = hide.ns
+   )
+ }
+ 
 # Labels
 p <- p +
   xlab("Experiment") +
@@ -261,7 +237,10 @@ test_short <- (if (test == "Velocity (cm/s)"){"velocity"}
 
 if (savegraph == TRUE) {
   ggsave(
-    filename = file.path("Graphs", test_short, paste0(RNA, if(discriminatesexes){"_bysex"}, ".pdf")),
+    filename = here('Output', 'Open_Field', 'Graphs',
+                    paste0(RNA, "_",
+                           if (discriminatesexes) {"ST"} else {"T"},
+                           "_distance.pdf")),
     plot = last_plot(),
     device = "pdf",
     width = 10,
@@ -274,8 +253,9 @@ p
 
 # Export csv ----
 if (savecsv == TRUE) {
+  dir.create(here('Output', 'Open_Field', 'CSV'), showWarnings = FALSE)
   write.csv(of,
-            file = paste0("ExportCSVs/",
-                          RNA, "_Distance.csv"))
+            file = here('Output', 'Open_Field', 'CSV',
+                        paste0(RNA, '_open_field_distance.csv'))
+  )
 }
-

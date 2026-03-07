@@ -11,6 +11,7 @@
 
 # For publication, CSVs from this script were exported to GraphPad Prism 10, for 
 # further statistical analysis, outlier removal and final graphing.
+
 rm(list = ls())
 
 
@@ -31,12 +32,12 @@ simba_ROI_aggregates <- here('Data', 'Simba_Output', 'Open_Field', 'ROI_descript
 videostoexclude <- here('Data', 'Reference_Tables', 'videos_to_exclude.csv')
 
 # Graph settings
-discriminatesexes <- FALSE
+discriminatesexes <- TRUE
 perform_t_tests <- TRUE # Note: 2-way ANOVA required if sexes separated.
 
 # Export
-savegraph <- TRUE
-savecsv <- TRUE
+savegraph <- FALSE
+savecsv <- FALSE
 
 
 # Read files ----
@@ -166,51 +167,27 @@ p <- ggplot(data=of, aes(x = get(ifelse(discriminatesexes == TRUE, "st", "Treatm
     color = "black"
   )
 
-if (perform_t_tests){
-# Add comparisons, separated into 2 so that Male/Male and Female/Female can be plotted at same height
-if(discriminatesexes){
-  comparisons1 <- list(
-    c("M Control", "M ASO")
-  )
+if (perform_t_tests & (discriminatesexes == FALSE)){
+# Add comparisons
+  comparisons1 <- list(c("Control", "ASO"))
   
-  comparisons2 <- list(
-    c("F Control", "F ASO"),
-    c("M ASO", "F ASO"),
-    c("M Control", "F Control")
-  )
+  bracket.size = 1
+  tip.length = 0.03
+  step.increase = 0.1
+  method = "t.test"
+  label = "p.format"
+  hide.ns = FALSE
   
-} else {
-  
-  comparisons1 <- list(
-    c("Control", "ASO")
+
+  p <- p + stat_compare_means(
+    comparisons = comparisons1,
+    method = method,
+    label = label,
+    bracket.size = bracket.size,
+    tip.length = tip.length,
+    step.increase = step.increase,
+    hide.ns = hide.ns
   )
-}
-
-bracket.size = 1
-tip.length = 0.03
-step.increase = 0.1
-method = "t.test"
-label = "p.format"
-hide.ns = FALSE
-
-
-p <- p + stat_compare_means(comparisons = comparisons1,
-                              method = method,
-                              label = label,
-                              bracket.size = bracket.size,
-                              tip.length = tip.length,
-                              step.increase = step.increase,
-                              hide.ns = hide.ns)
-
-if (discriminatesexes){
-  p <- p + stat_compare_means(comparisons = comparisons2,
-                              method = method,
-                              label = label,
-                              bracket.size = bracket.size,
-                              tip.length = tip.length,
-                              step.increase = step.increase,
-                              hide.ns = hide.ns)
-}
 }
 
 # Labels
