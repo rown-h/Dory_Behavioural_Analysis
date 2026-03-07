@@ -14,15 +14,19 @@
 # For publication, CSVs from this script were exported to GraphPad Prism 10, for 
 # further statistical analysis, outlier removal and final graphing.
 
-workingdirectory <- 'Scripts/NOR_OLT'
-setwd(workingdirectory)
 rm(list = ls())
+
+# Packages ----
+library(here)
+library(tidyverse)
+library(ggpubr)
+library(ggnewscale)
 
 # Inputs ----
 # Filepaths
-keyfilepath <- 'Data/Reference_Tables/ratID_key.csv'
-simba_machinepredictions_aggregates <- 'Data/Simba_Output/NOR_OLT/data_summary.csv'
-videostoexclude <- 'videos_to_exclude.csv'
+keyfilepath <- here('Data', 'Reference_Tables', 'ratID_key.csv')
+simba_machinepredictions_aggregates <- here('Data', 'Simba_Output', 'NOR_OLT', 'data_summary.csv')
+videostoexclude <- here('Data', 'Reference_Tables', 'videos_to_exclude.csv')
 
 # Data selection
 test <- "NOR"
@@ -43,11 +47,6 @@ perform_t_tests <- TRUE # Note: 2-way ANOVA required if sexes separated.
 # Export
 savegraph <- FALSE
 savecsv <- FALSE
-
-# Packages ----
-library(tidyverse)
-library(ggpubr)
-library(ggnewscale)
 
 # Read files ----
 key <- read.csv(keyfilepath)
@@ -276,11 +275,10 @@ DI_df <- arrange(DI_df, RatID)
   # ---- Saving graph and table ----
   if (savegraph == TRUE) {
     ggsave(
-      filename = paste0("Graphs/",
-                           if(output == "exploration"){"Exploration/"} else "",
-                           if(discriminatesexes == FALSE){"NoSexDiscrimination/"} else "",
-                           paste0(RNA, "_", test, "_", phase),
-                                  ".pdf"),
+      filename = here('Output', 'NOR_OLT', 'Graphs',
+                      output, 
+                      if (discriminatesexes) {'Sex-Treatment'} else {'Treatment'},
+                      paste0(RNA, "_", test, "_", phase, ".pdf")),
       plot = last_plot(),
       device = "pdf",
       width = 10,
@@ -294,7 +292,7 @@ DI_df <- arrange(DI_df, RatID)
 # Saving table
 if (savecsv == TRUE) {
   write.csv(graph_df,
-            file = paste0("ExportCSVs/",
-                          RNA, "_", test, "_", phase, ".csv"))
+            file = here('Output', 'NOR_OLT', 'CSV',
+                        paste0(RNA, "_", test, "_", phase, ".csv")))
 }
 
