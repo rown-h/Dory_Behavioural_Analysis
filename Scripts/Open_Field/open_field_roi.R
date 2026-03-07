@@ -246,6 +246,6 @@ if (savecsv == TRUE) {
   dir.create(here('Output', 'Open_Field', 'CSV'), showWarnings = FALSE)
   write.csv(of,
             file = here('Output', 'Open_Field', 'CSV',
-                        paste0(RNA, 'open_field_roi.csv'))
+                        paste0(RNA, '_open_field_roi.csv'))
   )
 }
