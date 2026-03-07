@@ -11,10 +11,14 @@
 
 # For publication, CSVs from this script were exported to GraphPad Prism 10, for 
 # further statistical analysis, outlier removal and final graphing.
-
-workingdirectory <- 'Scripts/Open_Field'
-setwd(workingdirectory)
 rm(list = ls())
+
+
+# Packages ----
+library(here) # For relative filepaths
+library(tidyverse) # For dataframe manipulation and plotting
+library(ggpubr) # For adding p-values to plots (stat_compare_means)
+library(ggnewscale) # For colouring points and boxes separately
 
 # Inputs ----
 # Data selection
@@ -22,23 +26,17 @@ RNA <- "Dory"
 test <- "percentInner" # Do not change for this script.
 
 # Filepaths
-keyfilepath <- 'Data/Reference_Tables/ratID_key.csv'
-simba_ROI_aggregates <- 'Data/Simba_Output/Open_Field/ROI_descriptive_statistics.csv'
-videostoexclude <- 'Data/Reference_Tables/videos_to_exclude.csv'
+keyfilepath <- here('Data', 'Reference_Tables', 'ratID_key.csv')
+simba_ROI_aggregates <- here('Data', 'Simba_Output', 'Open_Field', 'ROI_descriptive_statistics.csv')
+videostoexclude <- here('Data', 'Reference_Tables', 'videos_to_exclude.csv')
 
 # Graph settings
 discriminatesexes <- FALSE
 perform_t_tests <- TRUE # Note: 2-way ANOVA required if sexes separated.
 
 # Export
-savegraph <- FALSE
-savecsv <- FALSE
-
-
-# Packages ----
-library(tidyverse)
-library(ggpubr) # For adding p-values to plots (stat_compare_means)
-library(ggnewscale) # For colouring points and boxes separately
+savegraph <- TRUE
+savecsv <- TRUE
 
 
 # Read files ----
@@ -164,7 +162,7 @@ p <- ggplot(data=of, aes(x = get(ifelse(discriminatesexes == TRUE, "st", "Treatm
     data = data.frame(x = 0, xend = 0, y = 0, yend = 20.5),
     aes(x = x, xend = xend, y = y, yend = yend),
     inherit.aes = FALSE,
-    size = 2,
+    linewidth = 2,
     color = "black"
   )
 
@@ -231,7 +229,10 @@ p
 # Export graph ----
 if (savegraph == TRUE) {
   ggsave(
-    filename = file.path("Graphs", paste0(RNA, "_", test, "_", if(discriminatesexes == FALSE){"NoSex"}, ".pdf")),
+    filename = here('Output', 'Open_Field', 'Graphs',
+                    paste0(RNA, "_",
+                           if (discriminatesexes) {"ST"} else {"T"},
+                           "_percent_inner.pdf")),
     plot = last_plot(),
     device = "pdf",
     width = 10,
@@ -242,7 +243,9 @@ if (savegraph == TRUE) {
 
 # Export csv ----
 if (savecsv == TRUE) {
+  dir.create(here('Output', 'Open_Field', 'CSV'), showWarnings = FALSE)
   write.csv(of,
-            file = paste0("ExportCSVs/",
-                          RNA, "_PercentInner.csv"))
+            file = here('Output', 'Open_Field', 'CSV',
+                        paste0(RNA, 'open_field_roi.csv'))
+  )
 }
