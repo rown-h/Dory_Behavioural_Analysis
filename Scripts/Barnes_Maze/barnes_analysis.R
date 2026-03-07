@@ -8,32 +8,30 @@
 # For all data, set a minimum likelihood threshold of 0.6 in SimBA.
 
 # See 'test_description_and_files.csv' for more explanation.
-
-workingdirectory <- 'Scripts/Barnes_Maze'
-setwd(workingdirectory)
 rm(list = ls())
 
 # Packages ----
-library(tidyverse)
+library(here) # Facilitates relative paths
+library(tidyverse) # For dataframe logic and plotting
 library(ggpattern) # Allows patterns on graph
 
 # INPUTS =======================================================================
 # Reference table (key) files ----
-key_filepath         <- 'Data/Reference_Tables/ratID_key.csv'
-trainday_key_filepath <- 'Data/Reference_Tables/barnes_day_key.csv'
+key_filepath         <- here('Data', 'Reference_Tables', 'ratID_key.csv')
+trainday_key_filepath <- here('Data', 'Reference_Tables', 'barnes_day_key.csv')
 
 # SimBA output files ----
 ## Detailed ROI data (for strategy and primary latency, errors, or path length)
-nose_filepath  <- 'Data/Simba_Output/Barnes_Maze/Detailed_ROI_data_nose.csv'
-l_ear_filepath <- 'Data/Simba_Output/Barnes_Maze/Detailed_ROI_data_ear_left.csv'
-r_ear_filepath <- 'Data/Simba_Output/Barnes_Maze/Detailed_ROI_data_ear_right.csv'
+nose_filepath  <- here('Data', 'Simba_Output', 'Barnes_Maze', 'Detailed_ROI_data_nose.csv')
+l_ear_filepath <- here('Data', 'Simba_Output', 'Barnes_Maze', 'Detailed_ROI_data_ear_left.csv')
+r_ear_filepath <- here('Data', 'Simba_Output', 'Barnes_Maze', 'Detailed_ROI_data_ear_right.csv')
 
 ## Movement logs (for path lengths)
-pathlength_filepath <- 'Data/Simba_Output/Barnes_Maze/Movement_log.csv'
-pathlength_timebin_filepath <- 'Data/Simba_Output/Barnes_Maze/Time_bins_1.0s_movement_results.csv'
+pathlength_filepath <- here('Data', 'Simba_Output', 'Barnes_Maze', 'Movement_log.csv')
+pathlength_timebin_filepath <- here('Data', 'Simba_Output', 'Barnes_Maze', 'Time_bins_1.0s_movement_results.csv')
 
 ## Summary data (for total latency)
-aggregate_ROI_filepath     <- 'Data/Simba_Output/Barnes_Maze/ROI_descriptive_statistics.csv'
+aggregate_ROI_filepath     <- here('Data', 'Simba_Output', 'Barnes_Maze', 'ROI_descriptive_statistics.csv')
 
 
 # Calculation options ----
@@ -43,7 +41,7 @@ aggregate_ROI_filepath     <- 'Data/Simba_Output/Barnes_Maze/ROI_descriptive_sta
 combine_bodyparts <- TRUE
 
 # Loop through all metrics and export both Prism CSV, summary CSV and graph.
-export_all <- TRUE
+export_all <- FALSE
 
 
 # INSTRUCTIONS =================================================================
@@ -209,7 +207,7 @@ pathlength_primary$distance <- pathlength_primary$distance_cm / 100
 
 
 # STRATEGY, AND TOTAL/PRIMARY ERRORS ----
-source("SearchTests.R")
+source(here('Scripts', 'Barnes_Maze', 'search_tests.R'))
 searchtests_results <- map(bodyparts, search_tests)
 
 # Combine, then take median errors and max scores across bodyparts by video
@@ -431,9 +429,9 @@ make_graph <- function(metric_input,
                        average_days = TRUE,
                        group_sexes  = TRUE,
                        save_graph   = FALSE,
-                       graph_dir    = "barnes_graph",
+                       graph_dir    = here('Output', 'Barnes_Maze', 'Graphs'),
                        save_summary_csv     = FALSE,
-                       summary_csv_dir      = "barnes_summary_csv") {
+                       summary_csv_dir      = here('Output', 'Barnes_Maze', 'CSV')) {
   
   # Consistent dodging for bars/error bars
   dodge <- position_dodge(width = 0.8)
