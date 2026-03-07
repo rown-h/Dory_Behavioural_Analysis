@@ -29,7 +29,7 @@ simba_machinepredictions_aggregates <- here('Data', 'Simba_Output', 'NOR_OLT', '
 videostoexclude <- here('Data', 'Reference_Tables', 'videos_to_exclude.csv')
 
 # Data selection
-test <- "NOR"
+test <- "NPR"
 RNA <- "Dory"
 phase <- 2 # Phase 1 is the training phase, Phase 2 is the test phase.
 
@@ -45,8 +45,8 @@ discriminatesexes <- FALSE # Separate males and females for graphing
 perform_t_tests <- TRUE # Note: 2-way ANOVA required if sexes separated.
 
 # Export
-savegraph <- FALSE
-savecsv <- FALSE
+savegraph <- TRUE
+savecsv <- TRUE
 
 # Read files ----
 key <- read.csv(keyfilepath)
@@ -216,39 +216,18 @@ DI_df <- arrange(DI_df, RatID)
     )
   
   # ---- Comparisons & significance ----
-  if (perform_t_tests) {
-  
-  if (discriminatesexes) {
-    comparisons1 <- list(c("M Control", "M ASO"))
-    comparisons2 <- list(
-      c("F Control", "F ASO"),
-      c("M ASO", "F ASO"),
-      c("M Control", "F Control")
-    )
-  } else {
+  if (perform_t_tests & (discriminatesexes == FALSE)) {
     comparisons1 <- list(c("Control", "ASO"))
-  }
-  
-  bracket.size   <- 1
-  tip.length     <- 0.03
-  step.increase  <- 0.1
-  method         <- "t.test"
-  label          <- "p.format"
-  hide.ns        <- FALSE
-  
-  p2 <- p2 + stat_compare_means(
-    comparisons   = comparisons1,
-    method        = method,
-    label         = label,
-    bracket.size  = bracket.size,
-    tip.length    = tip.length,
-    step.increase = step.increase,
-    hide.ns       = hide.ns
-  )
-  
-  if (discriminatesexes) {
+    
+    bracket.size   <- 1
+    tip.length     <- 0.03
+    step.increase  <- 0.1
+    method         <- "t.test"
+    label          <- "p.format"
+    hide.ns        <- FALSE
+    
     p2 <- p2 + stat_compare_means(
-      comparisons   = comparisons2,
+      comparisons   = comparisons1,
       method        = method,
       label         = label,
       bracket.size  = bracket.size,
@@ -257,8 +236,7 @@ DI_df <- arrange(DI_df, RatID)
       hide.ns       = hide.ns
     )
   }
-  }
-  
+
   # ---- Axes & title labels ----
   p2 <- p2 +
     xlab("Experiment") +
@@ -276,9 +254,9 @@ DI_df <- arrange(DI_df, RatID)
   if (savegraph == TRUE) {
     ggsave(
       filename = here('Output', 'NOR_OLT', 'Graphs',
-                      output, 
-                      if (discriminatesexes) {'Sex-Treatment'} else {'Treatment'},
-                      paste0(RNA, "_", test, "_", phase, ".pdf")),
+                      paste0(RNA, "_", test, "_", phase, "_",
+                             if (discriminatesexes) {'ST'} else {'T'},
+                             "_", output, ".pdf")),
       plot = last_plot(),
       device = "pdf",
       width = 10,
@@ -291,6 +269,7 @@ DI_df <- arrange(DI_df, RatID)
   
 # Saving table
 if (savecsv == TRUE) {
+  dir.create(here('Output', 'NOR_OLT', 'CSV'), showWarnings = FALSE)
   write.csv(graph_df,
             file = here('Output', 'NOR_OLT', 'CSV',
                         paste0(RNA, "_", test, "_", phase, ".csv")))
