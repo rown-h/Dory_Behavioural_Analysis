@@ -13,12 +13,11 @@ To track rat body parts in open field, novel object recognition (NOR), object lo
 Following body part tracking, the rats' movement and behaviours were analysed using [Simple Behavioral Analysis (SimBA)](https://doi.org/10.1038/s41593-024-01649-9) (versions 4.1.6–5.1.1), with scaling factors determined in [ImageJ](https://doi.org/10.1038/nmeth.2089). Any videos that ended significantly prematurely, commenced significantly late, or had other notable disruptions were excluded from the analysis. An explanation of each experiment's analysis is provided below.
 
 #### Open Field
-For the open field test, the arena's centre zone was defined as its four inner squares, constituting a quarter of its area. After defining a region of interest (ROI) in SimBA, smoothing pose prediction (500 ms, Gaussian) and filtering for points with likelihood ≥ 0.6, the duration for which the rats' centres were within this boundary was determined. In R, this value was divided by the total duration of the experiment to calculate the percentage of time in the inner zone. The total distance travelled was also calculated, defined as the distance travelled by a rat's centre.
+For the open field test, the arena's centre zone was defined as its four inner squares, constituting a quarter of its area. After defining a region of interest (ROI) in SimBA, smoothing pose prediction (500 ms, Gaussian) and filtering for points with likelihood ≥ 0.6, the duration for which the rats' centres were within this boundary was determined. In R, this value was divided by the total duration of the experiment to calculate the percentage of time in the inner zone. The total distance travelled was also calculated, defined as the distance travelled by a rat's centre. Data were analysed by two-way ANOVA.
 
 <p align="center">
 $\textrm{\% Inner} = \frac{(\textrm{Duration in Inner ROI})}{(\textrm{Duration in Inner ROI})+(\textrm{Duration outside Inner ROI})}$
 </p>
-
 
 ![Inner zone is the four inner squares](Images/open_field.svg)
 
