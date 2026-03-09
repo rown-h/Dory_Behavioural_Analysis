@@ -10,23 +10,25 @@ To track rat body parts in open field, novel object recognition (NOR), object lo
 **Figure 1: Labelling scheme for DeepLabCut body part tracking.** Image credit: Rowan Heggen, 2026.
 
 ### Analysis in [Simple Behavioral Analysis (SimBA)](https://github.com/sgoldenlab/simba/tree/master) and [R](https://www.R-project.org/)
-Following body part tracking, the rats' movement and behaviours were analysed using [Simple Behavioral Analysis (SimBA)](https://doi.org/10.1038/s41593-024-01649-9) (versions 4.1.6–5.1.1), with scaling factors determined in [ImageJ](https://doi.org/10.1038/nmeth.2089). Any videos that ended significantly prematurely, commenced significantly late, or had other notable disruptions were excluded from the analysis. An explanation of each experiment's analysis is provided below.
+Following body part tracking, the rats' movement and behaviours were analysed using [Simple Behavioral Analysis (SimBA)](https://doi.org/10.1038/s41593-024-01649-9) (versions 4.1.6–5.1.1), with scaling factors determined in [ImageJ](https://doi.org/10.1038/nmeth.2089). Any videos that ended significantly prematurely, commenced significantly late, or had other notable disruptions were excluded from the analysis. Test scores were determined in R (version 4.3.3) using the [tidyverse](https://doi.org/10.21105/joss.01686) package collection (version 2.0.0), prior to further statistical analysis and graphing in [GraphPad Prism](www.graphpad.com) (versions 10.6.1–11.0.0). An explanation of each experiment's analysis is provided below.
 
 #### Open Field
-For the open field test, the arena's centre zone was defined as its four inner squares, constituting a quarter of its area. After defining a region of interest (ROI) in SimBA (Figure 2), smoothing pose prediction (500 ms, Gaussian) and filtering for points with likelihood ≥ 0.6, the duration for which the rats' centres were within this boundary was determined. In R, this value was divided by the total duration of the experiment to calculate the percentage of time in the inner zone. The total distance travelled was also calculated, defined as the overall distance travelled by a rat's centre. Data were analysed by two-way ANOVA.
+For the open field test, the arena's centre zone was defined as its four inner squares, constituting a quarter of its area. After defining a region of interest (ROI) in SimBA (Figure 2), smoothing pose prediction (500 ms, Gaussian) and filtering for points with likelihood ≥ 0.6, the duration for which the rats' centres were within this boundary was determined. In R, this value was divided by the total duration of the experiment to calculate the percentage of time in the inner zone.
 
 <p align="center">
 $\textrm{\% Inner} = \frac{(\textrm{Duration in Inner ROI})}{(\textrm{Duration in Inner ROI})+(\textrm{Duration outside Inner ROI})}$
 </p>
 
+The total distance travelled was also calculated, defined as the distance travelled by the 'centre' body part, regardless of ROI. Data were analysed by two-way ANOVA.
+
 ![Inner zone is the four inner squares](Images/open_field.svg)
 
-**Figure 2: Inner zone for open field test.** On right, example path plot (rat08 open field test).
+**Figure 2: Open field test.** On left, illustration of inner zone definition. On right, example path plot of centre point (taken from rat08 open field test), with gradient from purple to yellow illustrating position from start to end of the 10 min test.
 
 #### Novel Object Recognition and Object Location Tests
-To analyse NOR and OLT, SimBA ROIs were drawn around the objects, and models were trained to classify object directed interaction. Interaction was defined as the rat being within 2 cm of an object with its nose oriented toward it. Frames in which rats were resting on or rearing against the object were excluded from the positive class. A total of 21 videos were manually annotated for model training (315,000 frames total, with ~11,000 frames in the positive class for each behaviour), and 20% of frames were held out as a test set. A Random Forest classifier (2,000 estimators) was trained using SimBA’s default feature extraction pipeline. After classification, a minimum bout length of 250 ms was applied to reduce spurious detections. Automated predictions were verified by both comparison of numerical output to a manually scored subset of videos, and inspection of machine-labelled videos.
+To analyse NOR and OLT, ROIs were declared around the objects, feature subsets were calculated, and models were trained to classify object directed interaction. Interaction was defined as the rat being within 2 cm of an object with its nose oriented toward it. Frames in which rats were resting on or rearing against the object were excluded from the positive class. A total of 21 videos were manually annotated for model training (315,000 frames total, with ~11,000 frames in the positive class for each behaviour), and 20% of frames were held out as a test set. A Random Forest classifier (2,000 estimators) was trained using SimBA’s default feature extraction pipeline. After classification, a minimum bout length of 250 ms was applied to reduce spurious detections. Automated predictions were verified by both comparison of numerical output to a manually scored subset of videos, and inspection of machine-labelled videos.
 
-Data were analysed in R (version 4.3.3) using the [tidyverse](https://doi.org/10.21105/joss.01686) package collection. Exploration was calculated as the total time a rat spent interacting with either object, and any rats with less than 10 s of exploration were excluded from the analysis. Discrimination indices were calculated as follows:
+ Exploration was calculated as the total time a rat spent interacting with either object, and any rats with less than 10 s of exploration were excluded from the analysis. Discrimination indices were calculated as follows:
 
 <p align="center">
 $\textrm{DI}_{\textrm{phase 1}} = \frac{t_\textrm{left}-t_\textrm{right}}{t_\textrm{left}+t_\textrm{right}} \hspace{3cm} $
