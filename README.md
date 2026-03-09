@@ -16,7 +16,7 @@ Following body part tracking, the rats' movement and behaviours were analysed us
 For the open field test, the arena's centre zone was defined as its four inner squares, constituting a quarter of its area. After defining a region of interest (ROI) in SimBA (Figure 2), smoothing pose prediction (500 ms, Gaussian) and filtering for points with likelihood ≥ 0.6, the duration for which the rats' centres were within this boundary was determined. In R, this value was divided by the total duration of the experiment to calculate the percentage of time in the inner zone.
 
 <p align="center">
-$\textrm{\% Inner} = \frac{(\textrm{Duration in Inner ROI})}{(\textrm{Duration in Inner ROI})+(\textrm{Duration outside Inner ROI})}$
+$\textrm{Percent Inner} = \frac{(\textrm{Duration in Inner ROI})}{(\textrm{Duration in Inner ROI})+(\textrm{Duration outside Inner ROI})}$
 </p>
 
 The path length was also calculated, defined as the total distance travelled by the 'centre' body part in metres, regardless of ROI. Data were analysed by two-way ANOVA (α = 0.05).
