@@ -7,7 +7,7 @@ To track rat body parts in open field, novel object recognition (NOR), object lo
 
 
 ![Nose, left ear, right ear, centre, left lateral, right lateral, tail base, tail end](Images/DLC_labelling.svg)
-**Figure 1: Labelling scheme for DeepLabCut body part tracking.** Image credit: Rowan Heggen, 2026.
+**Figure 1: Labelling scheme for DeepLabCut body part tracking.**
 
 ### Analysis in [Simple Behavioral Analysis (SimBA)](https://github.com/sgoldenlab/simba/tree/master) and [R](https://www.R-project.org/)
 Following body part tracking, the rats' movement and behaviours were analysed using [Simple Behavioral Analysis (SimBA)](https://doi.org/10.1038/s41593-024-01649-9) (versions 4.1.6–5.1.1), with scaling factors determined in [ImageJ](https://doi.org/10.1038/nmeth.2089). Any videos that ended significantly prematurely, commenced significantly late, or had other notable disruptions were excluded from the analysis. Test scores were determined in R (version 4.3.3) using the [tidyverse](https://doi.org/10.21105/joss.01686) package collection (version 2.0.0), prior to further statistical analysis and graphing in [GraphPad Prism](www.graphpad.com) (versions 10.6.1–11.0.0). An explanation of each experiment's analysis is provided below.
@@ -56,6 +56,6 @@ To analyse the Barnes maze, ROIs were drawn around each of its 18 holes in SimBA
 
 
 ![Visualisation of search strategies: direct (11), short correction 1 (10), short correction 2 (9), long correction (8), medium correction (7), short serial (8), serial 1 (7), serial 2 (6), serial 3 (5), serial 4 (4), combined 1 (3), combined 2 (2), random (1)](Images/barnes_scoring.svg)
-**Figure 4: Barnes maze search strategy scoring scheme.** Pink arrow indicates the sequence of holes visited by a rat, with the corresponding scores shown in green circles. Serial searches are defined as searches with fewer than two holes skipped at a time that maintain a consistent direction, save for permission of searching one hole in the reverse direction if the rat then immediately returns to the original direction. Image credit: Rowan Heggen 2026.
+**Figure 4: Barnes maze search strategy scoring scheme.** Pink arrow indicates the sequence of holes visited by a rat, with the corresponding scores shown in green circles. Serial searches are defined as searches with fewer than two holes skipped at a time that maintain a consistent direction, save for permission of searching one hole in the reverse direction if the rat then immediately returns to the original direction.
 
 The results for the Barnes maze were determined in R, then imported to GraphPad Prism, analysed by three-way repeated measure ANOVA (α = 0.05, Geisser Greenhouse corrected) and visualised. 
