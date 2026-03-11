@@ -3,7 +3,7 @@ Analysis scripts for rat behavioural experiments. These scripts were applied fol
 
 ### Required R packages
 
-The scripts in this repository were run on [R](https://www.R-project.org/) (version 4.3.3) through RStudio (Posit Software PBC, 2026).
+The scripts in this repository were run on [R](https://www.R-project.org/) (version 4.3.3) through RStudio (Posit Software PBC, 2026), with the following packages:
 
 | Package    | Version tested | Citation                                                               |
 |------------|----------------|------------------------------------------------------------------------|
