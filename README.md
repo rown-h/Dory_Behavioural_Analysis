@@ -1,6 +1,21 @@
 # Dory Behavioural Analysis
 Analysis scripts for rat behavioural experiments. These scripts were applied following body part tracking in DeepLabCut and behavioural classification in SimBA.
 
+### Required R packages
+The scripts in this repository were run on [R](https://www.R-project.org/) (version 4.3.3) through RStudio (Posit Software PBC, 2026).
+
+`install.packages(c('here', 'tidyverse', 'ggpattern', 'ggpubr', 'ggnewscale'))`
+
+| Package    | Version tested | Citation                                                               |
+|------------|----------------|------------------------------------------------------------------------|
+| here       | 1.0.1          | [Müller K (2020)](https://CRAN.R-project.org/package=here)             |
+| tidyverse  | 2.0.0          | [Wickham et al. (2019)](https://doi.org/10.21105/joss.01686)           |
+| ggpattern  | 1.1.4          | [Mike FC & Davis (2025)](https://CRAN.R-project.org/package=ggpattern) |
+| ggpubr     | 0.6.1          | [Kassambara (2025)](https://CRAN.R-project.org/package=ggpubr)         |
+| ggnewscale | 0.5.2          | [Campitelli (2025)](https://CRAN.R-project.org/package=ggnewscale)     |
+
+
+
 ## Methods
 ### Body part tracking in [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut)
 To track rat body parts in open field, novel object recognition (NOR), object location task (OLT) and Barnes maze experiments, [DeepLabCut](https://doi.org/10.1038/s41593-018-0209-y) (version 3.0.0rc9) was run using the [UNSW Katana](https://doi.org/10.26190/669x-a286) computational cluster. The labelling scheme is shown in Figure 1. A [ResNet-50](https://doi.org/10.48550/arXiv.1512.03385)-based neural network was trained, with 95% train-test split, a batch size of 8 and all other default parameters. This model was trained on 1525 labelled frames across 77 videos (25 frames per second). After 400 epochs, the test root mean square error (RMSE) was 10.9 mm for predictions with greater than 60% confidence. 
@@ -10,7 +25,7 @@ To track rat body parts in open field, novel object recognition (NOR), object lo
 **Figure 1: Labelling scheme for DeepLabCut body part tracking.**
 
 ### Analysis in [Simple Behavioral Analysis (SimBA)](https://github.com/sgoldenlab/simba/tree/master) and [R](https://www.R-project.org/)
-Following body part tracking, the rats' movement and behaviours were analysed using [Simple Behavioral Analysis (SimBA)](https://doi.org/10.1038/s41593-024-01649-9) (versions 4.1.6–5.1.1), with scaling factors determined in [ImageJ](https://doi.org/10.1038/nmeth.2089). Any videos that ended significantly prematurely, commenced significantly late, or had other notable disruptions were excluded from the analysis. Test scores were determined in R (version 4.3.3) using the [tidyverse](https://doi.org/10.21105/joss.01686) package collection (version 2.0.0), prior to further statistical analysis and graphing in [GraphPad Prism](www.graphpad.com) (versions 10.6.1–11.0.0). An explanation of each experiment's analysis is provided below.
+Following body part tracking, the rats' movement and behaviours were analysed using [Simple Behavioral Analysis (SimBA)](https://doi.org/10.1038/s41593-024-01649-9) (versions 4.1.6–5.1.1), with scaling factors determined in [ImageJ](https://doi.org/10.1038/nmeth.2089). Any videos that ended significantly prematurely, commenced significantly late, or had other notable disruptions were excluded from the analysis. Test scores were determined in [R](https://www.R-project.org/) (version 4.3.3) using the [tidyverse](https://doi.org/10.21105/joss.01686) package collection (version 2.0.0), prior to further statistical analysis and graphing in [GraphPad Prism](www.graphpad.com) (versions 10.6.1–11.0.0). An explanation of each experiment's analysis is provided below.
 
 #### Open Field
 For the open field test, the arena's centre zone was defined as its four inner squares, constituting a quarter of its area. After defining a region of interest (ROI) in SimBA (Figure 2), smoothing pose prediction (500 ms, Gaussian) and filtering for points with likelihood ≥ 0.6, the duration for which the rats' centres were within this boundary was determined. In R, this value was divided by the total duration of the experiment to calculate the percentage of time in the inner zone.
