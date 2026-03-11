@@ -1,10 +1,9 @@
 # Dory Behavioural Analysis
-Analysis scripts for rat behavioural experiments. These scripts were applied following body part tracking in DeepLabCut and behavioural classification in SimBA.
+Analysis scripts for rat behavioural experiments. These scripts were applied following body part tracking in DeepLabCut and behavioural classification in SimBA. 
 
 ### Required R packages
-The scripts in this repository were run on [R](https://www.R-project.org/) (version 4.3.3) through RStudio (Posit Software PBC, 2026).
 
-`install.packages(c('here', 'tidyverse', 'ggpattern', 'ggpubr', 'ggnewscale'))`
+The scripts in this repository were run on [R](https://www.R-project.org/) (version 4.3.3) through RStudio (Posit Software PBC, 2026).
 
 | Package    | Version tested | Citation                                                               |
 |------------|----------------|------------------------------------------------------------------------|
@@ -14,7 +13,9 @@ The scripts in this repository were run on [R](https://www.R-project.org/) (vers
 | ggpubr     | 0.6.1          | [Kassambara (2025)](https://CRAN.R-project.org/package=ggpubr)         |
 | ggnewscale | 0.5.2          | [Campitelli (2025)](https://CRAN.R-project.org/package=ggnewscale)     |
 
+To install the latest version of all packages, run `install.packages(c('here', 'tidyverse', 'ggpattern', 'ggpubr', 'ggnewscale'))`
 
+---
 
 ## Methods
 ### Body part tracking in [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut)
